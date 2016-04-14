@@ -6,15 +6,9 @@
 
 
 var icebergApp = angular.module("icebergApp", [
-    'ui.router'
+    'ui.router',
+	'AppControllers',
+	'AppServices'
+
 ]);
 
-icebergApp.config(['$stateProvider','$urlProvider',function($stateProvider,$urlProvider){
-	$stateProvider
-		.state('main',{
-			url:'/main',
-			templateUrl:'views/main.html'
-	})
-		.state('',{})
-
-}]);

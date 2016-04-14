@@ -1,5 +1,7 @@
 package com.puertobahia.iceberg.config;
 
+
+import com.puertobahia.iceberg.config.security.SecurityConfiguration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
@@ -10,6 +12,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class SpringWebAppInitializer implements WebApplicationInitializer {
 
+    //SpringSecurity configuration
+    private static Class<?>[] configurationClasses =  new Class<?>[]{SecurityConfiguration.class};
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
@@ -26,5 +30,10 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 
     }
 
+//    @Override
+//    protected void customizeRegistration(Dynamic registration) {
+//        registration.setInitParameter("dispatchOptionsRequest", "true");
+//        super.customizeRegistration(registration);
+//    }
 
 }

@@ -8,6 +8,3 @@
 angular.module('AppControllers',[]);
 angular.module('AppServices',[]);
 
-angular.module('lodash',[]).factory('_', function(){
-        return window._;
-});
