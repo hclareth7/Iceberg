@@ -1,0 +1,23 @@
+body {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   background: url('../img/background.png')no-repeat center center fixed;
+   background-size: cover;
+}
+
+input{
+   text-transform: capitalize;
+}
+
+.bg-login {
+   background: #2E8E9E !important;
+}
+
+.wizard > div > ul >li >a {
+  background:#80DAE5;
+}
+
+.mi-modal{
+   min-width: 60%;
+}

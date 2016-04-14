@@ -30,4 +30,6 @@ public class Objetivo implements Serializable{
     private String descripcion;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "objetivo", cascade=CascadeType.ALL)
     private List<ObjetivoHasIndicador> objetivos_indocadores;
+
+
 }
