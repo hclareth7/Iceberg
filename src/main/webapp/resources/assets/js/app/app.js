@@ -9,6 +9,5 @@ var icebergApp = angular.module("icebergApp", [
     'ui.router',
 	'AppControllers',
 	'AppServices'
-
 ]);
 
