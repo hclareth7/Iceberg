@@ -5,10 +5,20 @@
  */
 package com.puertobahia.iceberg.service;
 
+
+import com.puertobahia.iceberg.entity.Zona;
+import java.util.List;
+
 /**
  *
  * @author Full Stack JavaScrip
  */
-public interface NewInterface {
-    
+public interface ZonaService {
+    public List<Zona> getAllZona();
+
+    public Zona getById(Long id);
+
+    public void saveOrUpdate(Zona zona);
+
+    public void delete(Long id);
 }
