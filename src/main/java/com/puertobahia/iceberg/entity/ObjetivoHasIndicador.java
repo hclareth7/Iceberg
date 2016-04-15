@@ -30,4 +30,30 @@ public class ObjetivoHasIndicador implements Serializable{
     @ManyToOne(fetch = FetchType.LAZY)
     private Indicador indicador;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Objetivo getObjetivo() {
+        return objetivo;
+    }
+
+    public void setObjetivo(Objetivo objetivo) {
+        this.objetivo = objetivo;
+    }
+
+    public Indicador getIndicador() {
+        return indicador;
+    }
+
+    public void setIndicador(Indicador indicador) {
+        this.indicador = indicador;
+    }
+
+    
+    
 }

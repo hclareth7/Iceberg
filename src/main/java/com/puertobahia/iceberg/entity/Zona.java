@@ -22,7 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "zonas")
-public class Zona implements Serializable{
+public class Zona implements Serializable {
 
     @Id
     @GeneratedValue
@@ -38,5 +38,53 @@ public class Zona implements Serializable{
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "zona")
     List<Programacion> programaciones;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Beneficiario getBenficiarios() {
+        return benficiarios;
+    }
+
+    public void setBenficiarios(Beneficiario benficiarios) {
+        this.benficiarios = benficiarios;
+    }
+
+    public List<Programacion> getProgramaciones() {
+        return programaciones;
+    }
+
+    public void setProgramaciones(List<Programacion> programaciones) {
+        this.programaciones = programaciones;
+    }
 
 }

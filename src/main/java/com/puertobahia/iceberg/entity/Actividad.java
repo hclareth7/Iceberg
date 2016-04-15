@@ -35,5 +35,45 @@ public class Actividad implements Serializable{
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "actividad")
     List<Programacion> programaciones;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Programa getPrograma() {
+        return programa;
+    }
+
+    public void setPrograma(Programa programa) {
+        this.programa = programa;
+    }
+
+    public List<Programacion> getProgramaciones() {
+        return programaciones;
+    }
+
+    public void setProgramaciones(List<Programacion> programaciones) {
+        this.programaciones = programaciones;
+    }
+
+    
 }
