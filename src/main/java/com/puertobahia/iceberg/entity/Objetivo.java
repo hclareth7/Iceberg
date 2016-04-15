@@ -31,5 +31,37 @@ public class Objetivo implements Serializable{
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "objetivo", cascade=CascadeType.ALL)
     private List<ObjetivoHasIndicador> objetivos_indocadores;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public List<ObjetivoHasIndicador> getObjetivos_indocadores() {
+        return objetivos_indocadores;
+    }
+
+    public void setObjetivos_indocadores(List<ObjetivoHasIndicador> objetivos_indocadores) {
+        this.objetivos_indocadores = objetivos_indocadores;
+    }
+
 
 }

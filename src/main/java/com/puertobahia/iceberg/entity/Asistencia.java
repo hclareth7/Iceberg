@@ -32,5 +32,37 @@ public class Asistencia implements Serializable{
     @ManyToOne(fetch = FetchType.LAZY)
     private Beneficiario beneficiario;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getAsistio() {
+        return asistio;
+    }
+
+    public void setAsistio(int asistio) {
+        this.asistio = asistio;
+    }
+
+    public Programacion getProgramacion() {
+        return programacion;
+    }
+
+    public void setProgramacion(Programacion programacion) {
+        this.programacion = programacion;
+    }
+
+    public Beneficiario getBeneficiario() {
+        return beneficiario;
+    }
+
+    public void setBeneficiario(Beneficiario beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+
 
 }
