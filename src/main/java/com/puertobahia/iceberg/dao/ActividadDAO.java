@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.puertobahia.iceberg.dao.impl;
+package com.puertobahia.iceberg.dao;
 
 import com.puertobahia.iceberg.entity.Actividad;
 import java.util.List;
