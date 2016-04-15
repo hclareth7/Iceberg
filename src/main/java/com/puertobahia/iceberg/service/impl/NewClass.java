@@ -10,5 +10,5 @@ package com.puertobahia.iceberg.service.impl;
  * @author Full Stack JavaScrip
  */
 public class NewClass {
-    
+    private int fgj;
 }
