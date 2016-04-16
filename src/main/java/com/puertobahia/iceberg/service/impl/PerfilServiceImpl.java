@@ -10,11 +10,16 @@ import com.puertobahia.iceberg.entity.Perfil;
 import com.puertobahia.iceberg.service.PerfilService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Full Stack JavaScrip
  */
+
+@Service
+@Transactional
 public class PerfilServiceImpl implements PerfilService{
     
     @Autowired

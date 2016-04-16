@@ -13,12 +13,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Full Stack JavaScrip
  */
-public class AsistenciaDAPImpl implements AsistenciaDAO {
+@Repository
+public class AsistenciaDAOImpl implements AsistenciaDAO {
 
     @Autowired
     SessionFactory sessionFactory;

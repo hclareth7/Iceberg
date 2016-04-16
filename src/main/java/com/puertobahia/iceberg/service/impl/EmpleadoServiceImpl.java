@@ -10,11 +10,15 @@ import com.puertobahia.iceberg.entity.Empleado;
 import com.puertobahia.iceberg.service.EmpleadoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Full Stack JavaScrip
  */
+@Service
+@Transactional
 public class EmpleadoServiceImpl implements EmpleadoService{
     
     @Autowired

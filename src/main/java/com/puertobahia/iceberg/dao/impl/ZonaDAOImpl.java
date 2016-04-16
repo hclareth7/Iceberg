@@ -6,7 +6,6 @@
 package com.puertobahia.iceberg.dao.impl;
 
 import com.puertobahia.iceberg.dao.ZonaDAO;
-import com.puertobahia.iceberg.entity.Programacion;
 import com.puertobahia.iceberg.entity.Zona;
 import java.util.List;
 import org.hibernate.Criteria;
@@ -14,11 +13,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Full Stack JavaScrip
  */
+@Repository
 public class ZonaDAOImpl implements ZonaDAO {
 
     @Autowired
