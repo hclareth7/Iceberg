@@ -6,6 +6,7 @@
 package com.puertobahia.iceberg.controllers;
 
 
+import com.puertobahia.iceberg.config.security.ResourceNotFoundException;
 import com.puertobahia.iceberg.entity.Zona;
 import com.puertobahia.iceberg.service.ZonaService;
 import java.util.List;
@@ -36,8 +37,16 @@ public class ZonaController {
     
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
     public @ResponseBody Zona getZonaById(@PathVariable Long id) {
+        
         Zona zona = zonaService.getById(id);
-        return zona;
+        if (zona!=null) {
+            // whatever
+            return zona;
+        }
+        else {
+            throw new ResourceNotFoundException(); 
+        }
+        
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT)
