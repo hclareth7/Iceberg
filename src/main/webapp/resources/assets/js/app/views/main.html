@@ -12,7 +12,7 @@
 			<a href="#" class="dropdown-toggle fw600" data-toggle="dropdown">
 				<span class="hidden-xs"><name>Username</name> </span>
 				<span class="fa fa-caret-down hidden-xs mr15"></span>
-				<img src="" alt="avatar" class="mw55">
+				<img src="assets/img/avatar.png" alt="avatar" class="mw55">
 			</a>
 			<ul class="dropdown-menu list-group keep-dropdown w250" role="menu">
 				<li class="list-group-item">
@@ -42,14 +42,15 @@
 			<div class="sidebar-widget author-widget">
 				<div class="media">
 					<a class="media-left" href="#">
-						<img src="assets/img/avatars/profile_avatar.jpg" class="img-responsive">
+						<img src="assets/img/avatar.png" class="img-responsive">
 					</a>
 
 					<div class="media-body">
 						<div class="media-links">
-							<a href="#" class="sidebar-menu-toggle">User Menu -</a> <a ui-sref="login">Logout</a>
+							<a href="#" class="sidebar-menu-toggle">Juan Puerto Bahia</a>
+							<a ui-sref="login"></a>
 						</div>
-						<div class="media-author">USERNAME</div>
+						<div class="media-author">Administrador</div>
 					</div>
 				</div>
 			</div>
@@ -58,10 +59,21 @@
 
 		<!-- -------------- Sidebar Menu  -------------- -->
 		<ul class="nav sidebar-menu">
+
+			<li class="sidebar-label pt30">Menu</li>
+
+
 			<li>
 				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
-					<span class="fa fa-dashboard"></span>
-					<span class="sidebar-title">Zonas</span>
+					<span class="fa fa-group"></span>
+					<span class="sidebar-title">Beneficiarios</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="">
+					<span class="fa fa-puzzle-piece"></span>
+					<span class="sidebar-title">Programas</span>
 					<span class="caret"></span>
 				</a>
 				<!-- EJEMPLO DE SUBMENUS...
@@ -76,6 +88,49 @@
 						</li>
 					</ul>-->
 			</li>
+
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
+					<span class="fa fa-calendar"></span>
+					<span class="sidebar-title">Actividades</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
+					<span class="fa fa-map-marker"></span>
+					<span class="sidebar-title">Zonas</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+			
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
+					<span class="fa fa-suitcase"></span>
+					<span class="sidebar-title">Empleados</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
+					<span class="fa fa-user"></span>
+					<span class="sidebar-title">Usuarios</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+
+
+
+			<li>
+				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
+					<span class="fa fa-flag-checkered"></span>
+					<span class="sidebar-title">Objetivos</span>
+					<span class="caret"></span>
+				</a>
+			</li>
+
+
 		</ul>
 		<!-- -------------- /Sidebar Menu  -------------- -->
 
