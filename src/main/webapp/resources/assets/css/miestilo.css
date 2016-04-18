@@ -30,3 +30,12 @@ input{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.breadcrumb .fa{
+	background-color: #67D3E0;
+}
+
+.breadcrumb > li.breadcrumb-active > a{
+	color: #5a5386;
+	margin-left: 20px;
+}

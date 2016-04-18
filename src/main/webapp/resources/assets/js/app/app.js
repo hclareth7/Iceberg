@@ -11,30 +11,30 @@ var icebergApp = angular.module("icebergApp", [
 	'AppServices'
 ]);
 
-icebergApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider){
-	
-	$urlRouterProvider.otherwise('/');
-	
+icebergApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+
+	$urlRouterProvider.otherwise('/login');
+
 	$stateProvider
-		.state('main',{
+		.state('main', {
 			url: '/app',
 			templateUrl: 'assets/js/app/views/main.html'
 		})
-		.state('login',{
-			url: '/',
+		.state('login', {
+			url: '/login',
 			templateUrl: 'assets/js/app/views/login.html'
 		})
-	.state('main.zonas',{
+		.state('main.zonas', {
 			url: '/zona',
-			templateUrl: 'assets/js/app/views/zonas/home.html',
+			templateUrl: 'assets/js/app/views/zonas/base.html',
 			controller: 'zonaController'
 		})
-	.state('main.zonaDetalle',{
-			url: '/zona/:zonaId',
+		
+		.state('main.zonas.detalle', {
+			url: '/:zonaId',
 			templateUrl: 'assets/js/app/views/zonas/detalle.html',
 			controller: 'zonaDetalleController'
 		})
 
 
 }])
-

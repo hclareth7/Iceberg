@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -28,6 +29,7 @@ public class Zona implements Serializable {
     @GeneratedValue
     private Long id;
     private String nombre;
+    @Lob
     private String descripcion;
 
     @OneToOne(mappedBy = "zona")
@@ -38,6 +40,9 @@ public class Zona implements Serializable {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "zona")
     List<Programacion> programaciones;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "zona")
+    List<ConsejoComunitario> consejos_comunitario;
 
     public Long getId() {
         return id;
@@ -86,5 +91,15 @@ public class Zona implements Serializable {
     public void setProgramaciones(List<Programacion> programaciones) {
         this.programaciones = programaciones;
     }
+
+    public List<ConsejoComunitario> getConsejos_comunitario() {
+        return consejos_comunitario;
+    }
+
+    public void setConsejos_comunitario(List<ConsejoComunitario> consejos_comunitario) {
+        this.consejos_comunitario = consejos_comunitario;
+    }
+    
+    
 
 }

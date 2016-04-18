@@ -34,6 +34,62 @@ public class ConsejoComunitario {
     
     @ManyToOne(fetch = FetchType.LAZY)
     private Zona zona;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public String getPresidente() {
+        return presidente;
+    }
+
+    public void setPresidente(String presidente) {
+        this.presidente = presidente;
+    }
+
+    public String getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
+    }
+
+    public String getParticipantes() {
+        return participantes;
+    }
+
+    public void setParticipantes(String participantes) {
+        this.participantes = participantes;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
     
     
 }
