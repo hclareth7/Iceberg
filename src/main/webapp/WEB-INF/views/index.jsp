@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/miestilo.css">
 
 	<!-- ICONO-->
-	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="shortcut icon" href="assets/img/icon-pages2.png">
 
 	<!--[if lt IE 9]>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -63,7 +63,13 @@
 
 	<!-- -------------- Theme Scripts -------------- -->
 	<script src="assets/js/libs/utility.js"></script>
+	<!------------------JQ------------------->
+	
+		<script src="assets/js/jq/index.js"></script>
+		<script src="assets/js/jq/zonas/jqzona.js"></script>
 
+	
+	<!------------------Fin JQ------------------->
 
 	<!-- -------------- Angular Js  Scripts -------------- -->
 

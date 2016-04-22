@@ -1,41 +1,79 @@
 body {
-   margin: 0;
-   padding: 0;
-   width: 100%;
-   background-size: cover;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-size: cover;
 }
 
-input{
-   text-transform: capitalize;
+input {
+	text-transform: capitalize;
 }
 
 .bg-login {
-   background: #2E8E9E !important;
+	background: #2E8E9E !important;
 }
 
 .wizard > div > ul >li >a {
-  background:#80DAE5;
+	background: #80DAE5;
 }
 
-.mi-modal{
-   min-width: 60%;
+.mi-modal {
+	min-width: 60%;
 }
 
 .nowrap {
-  white-space: nowrap;
+	white-space: nowrap;
 }
-
 
 .ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.breadcrumb .fa{
+.breadcrumb .fa {
 	background-color: #67D3E0;
 }
 
-.breadcrumb > li.breadcrumb-active > a{
+.breadcrumb > li.breadcrumb-active > a {
 	color: #5a5386;
 	margin-left: 20px;
+}
+
+.micontent {
+	margin-right: 20px;
+	margin-left: 15px;
+}
+
+.mi-logotipo {
+	width: 200px;
+}
+.ic-zona {
+	display: block;
+	position: relative;
+	width: 200px;
+}
+
+.mi-zona-title {
+	float: left;
+    position: relative;
+    top: -157px;
+    left: 126px;
+    font-size: 58px;
+    margin: 0;
+}
+
+.tools-zonas {
+	width: 100%;
+	position: relative;
+	top: -41px;
+}
+
+.text-zona {
+	margin: 0;
+}
+
+.text-rigth {
+	width: 100%;
+	clear: both;
+	margin: 0;
 }
