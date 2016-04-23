@@ -34,7 +34,7 @@ public class Zona implements Serializable {
     @OneToOne(mappedBy = "zona")
     private Usuario usuario;
 
-    @OneToOne(mappedBy = "zona", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "zona")
     private Beneficiario benficiarios;
 
     @OneToMany( mappedBy = "zona")

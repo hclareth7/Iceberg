@@ -60,9 +60,5 @@ public class Accion implements Serializable {
     public void setPerfiles(List<Perfil> perfiles) {
         this.perfiles = perfiles;
     }
-    
-    
-
-
 
 }
