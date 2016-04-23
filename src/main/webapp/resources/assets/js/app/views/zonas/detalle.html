@@ -1,8 +1,8 @@
 <div class="chute chute-center micontent">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<div class="row">
-				<div class="col-md-8 panel panel-primary">
+				<div class="col-md-12 panel panel-primary">
 					<img src="assets/img/ic_zona.png" class="ic-zona center-block">
 					<h1 class="mi-zona-title">{{zona.nombre | capitalize}}</h1>
 
@@ -23,13 +23,41 @@
 			</div>
 
 		</div>
-		<div class="col-md-6 panel panel-primary">
-			<div class="panel-heading">
-				<span class="panel-title">Descripcion</span>
+		<div class="col-md-8">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span class="panel-title">Descripcion</span>
+				</div>
+				<div class="panel-body ">
+					<p>{{zona.descripcion}}</p>
+				</div>
 			</div>
-			<div class="panel-body">
-				<p>{{zona.descripcion}}</p>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span class="panel-title">Consejo comunitario</span>
+				</div>
+				<div class="panel-body">
+					<div class="well blockquote-rounded mv20">
+						<address>
+							<strong>Presidente</strong>
+							<br>Juan luis guerra
+							<br>Tel: 310 6672097
+							<br>
+						</address>
+						<address>
+							<strong>Miembros</strong>
+							<br>Juan pablo perez
+							<br>Juan pablo perez
+							
+							
+						</address>
+					</div>
+				</div>
 			</div>
 		</div>
+
 	</div>
+
+
 </div>

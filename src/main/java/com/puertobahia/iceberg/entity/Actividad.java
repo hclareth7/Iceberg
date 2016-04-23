@@ -29,10 +29,10 @@ public class Actividad implements Serializable{
     private String nombre;
     private String descripcion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Programa programa;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "actividad")
+    @OneToMany( mappedBy = "actividad")
     List<Programacion> programaciones;
 
     public Long getId() {

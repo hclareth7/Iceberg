@@ -31,9 +31,12 @@ public class ZonaController {
     
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.GET)
-    public @ResponseBody List<Zona> getAllZona() {
-        return zonaService.getAllZona();
+    public @ResponseBody String getAllZona() {
+        //return zonaService.getAllZona();
+        return "HOLA";
     }
+    
+   
     
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
     public @ResponseBody Zona getZonaById(@PathVariable Long id) {

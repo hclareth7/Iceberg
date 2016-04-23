@@ -6,7 +6,6 @@
 package com.puertobahia.iceberg.dao.impl;
 
 import com.puertobahia.iceberg.dao.ObjetivoDAO;
-import com.puertobahia.iceberg.entity.Indicador;
 import com.puertobahia.iceberg.entity.Objetivo;
 import java.util.List;
 import org.hibernate.Criteria;

@@ -20,4 +20,5 @@ public interface ZonaDAO {
     public void saveOrUpdate(Zona zona);
 
     public void delete(Long id);
+    
 }

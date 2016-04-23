@@ -1,23 +1,20 @@
 var controllerModule = angular.module('AppControllers');
 
-controllerModule.controller('zonaController', ['$scope', 'zonaService',
+controllerModule
+	.controller('zonaController', ['$scope', 'zonaService',
     '$stateParams',
     function ($scope, zonaService, $stateParams) {
 			$scope.zonas = [];
 			$scope.getAllZonas = function () {
 				zonaService.getAllZona().then(function (response) {
+					console.log(response.data);
 					$scope.zonas = response.data;
-					console.log($scope.zonas);
+					
 				});
 
 			};
 
-			
-
 			$scope.getAllZonas();
-
-
-
 			//
 
     }])
@@ -39,6 +36,10 @@ controllerModule.controller('zonaController', ['$scope', 'zonaService',
 
 			$scope.getZona(parseInt($stateParams.zonaId));
 
+	}])
+	.controller('zonaCrearController', ['$scope', 'zonaService','$stateParams', '$location',
+		function ($scope, zonaService, $stateParams, $location) {
+		
 	}])
 	.filter('capitalize', function () {
 				return function (input) {

@@ -31,9 +31,14 @@ icebergApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvi
 		})
 		
 		.state('main.zonas.detalle', {
-			url: '/:zonaId',
+			url: '/detalle/:zonaId',
 			templateUrl: 'assets/js/app/views/zonas/detalle.html',
 			controller: 'zonaDetalleController'
+		})
+		.state('main.zonas.crear', {
+			url: '/crear',
+			templateUrl: 'assets/js/app/views/zonas/crear.html',
+			controller: 'zonaCrearController'
 		})
 
 

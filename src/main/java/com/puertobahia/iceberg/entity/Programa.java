@@ -31,7 +31,7 @@ public class Programa implements Serializable{
     @ManyToMany(mappedBy="programas")
     private List<Beneficiario> beneficiarios;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "programa")
+    @OneToMany(mappedBy = "programa")
     private List<Actividad>actividades;
 
     public Long getId() {

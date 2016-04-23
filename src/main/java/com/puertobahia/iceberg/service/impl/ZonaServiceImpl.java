@@ -19,8 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional
-public class ZonaServiceImpl implements ZonaService{
-    
+public class ZonaServiceImpl implements ZonaService {
+
     @Autowired
     ZonaDAO zonaDAO;
 
@@ -43,4 +43,6 @@ public class ZonaServiceImpl implements ZonaService{
     public void delete(Long id) {
         zonaDAO.delete(id);
     }
+
+    
 }

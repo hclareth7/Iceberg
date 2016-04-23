@@ -29,7 +29,7 @@ public class Indicador implements Serializable{
     private String nombre;
     private String descripcion;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "indicador", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "indicador", cascade=CascadeType.ALL)
     private List<ObjetivoHasIndicador> objetivos_indocadores;
 
     public Long getId() {

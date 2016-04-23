@@ -32,7 +32,7 @@ public class ConsejoComunitario {
     private String participantes;
     private int estado;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Zona zona;
 
     public Long getId() {

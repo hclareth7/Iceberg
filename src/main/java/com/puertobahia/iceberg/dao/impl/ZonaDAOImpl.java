@@ -50,9 +50,11 @@ public class ZonaDAOImpl implements ZonaDAO {
 
     @Override
     public void delete(Long id) {
-         Zona zona = new Zona();
+        Zona zona = new Zona();
         zona.setId(id);
         getSession().delete(zona);
     }
+
+    
 
 }

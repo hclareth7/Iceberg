@@ -38,13 +38,13 @@ public class Programacion implements Serializable{
     @Lob
     private String observaciones;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Actividad actividad;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Zona zona;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "programacion", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "programacion", cascade=CascadeType.ALL)
     private List<Asistencia> asistencias;
 
     public Long getId() {

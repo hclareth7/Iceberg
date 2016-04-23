@@ -9,7 +9,6 @@ import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -35,19 +34,18 @@ public class Zona implements Serializable {
     @OneToOne(mappedBy = "zona")
     private Usuario usuario;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "zona", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "zona", cascade = CascadeType.ALL)
     private Beneficiario benficiarios;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "zona")
+    @OneToMany( mappedBy = "zona")
     List<Programacion> programaciones;
     
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "zona")
+    @OneToMany( mappedBy = "zona")
     List<ConsejoComunitario> consejos_comunitario;
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }

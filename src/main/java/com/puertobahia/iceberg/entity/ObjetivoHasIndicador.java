@@ -24,10 +24,10 @@ public class ObjetivoHasIndicador implements Serializable{
     @Id
     @GeneratedValue
     private Long id;
-     @ManyToOne(fetch = FetchType.LAZY)
+     @ManyToOne
     private Objetivo objetivo;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Indicador indicador;
 
     public Long getId() {

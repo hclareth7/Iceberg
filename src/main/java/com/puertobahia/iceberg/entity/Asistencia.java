@@ -26,10 +26,10 @@ public class Asistencia implements Serializable{
     private Long id;
     private int asistio;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Programacion programacion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Beneficiario beneficiario;
 
     public Long getId() {

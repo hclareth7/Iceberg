@@ -60,7 +60,7 @@ public class Beneficiario implements Serializable {
     private List<Programa> programas;
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "beneficiario", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "beneficiario", cascade=CascadeType.ALL)
     private List<Asistencia> asistencias;
 
     public Long getId() {
