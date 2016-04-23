@@ -31,9 +31,9 @@ public class ZonaController {
     
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.GET)
-    public @ResponseBody String getAllZona() {
-        //return zonaService.getAllZona();
-        return "HOLA";
+    public @ResponseBody List<Zona> getAllZona() {
+        return zonaService.getAllZona();
+        //return "HOLA";
     }
     
    
