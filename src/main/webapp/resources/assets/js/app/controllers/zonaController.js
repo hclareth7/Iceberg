@@ -9,12 +9,12 @@ controllerModule
 				zonaService.getAllZona().then(function (response) {
 					console.log(response.data);
 					$scope.zonas = response.data;
-					
+
 				});
 
 			};
 
-			$scope.getAllZonas();
+			//$scope.getAllZonas();
 			//
 
     }])
@@ -37,12 +37,8 @@ controllerModule
 			$scope.getZona(parseInt($stateParams.zonaId));
 
 	}])
-	.controller('zonaCrearController', ['$scope', 'zonaService','$stateParams', '$location',
+	.controller('zonaCrearController', ['$scope', 'zonaService', '$stateParams', '$location',
 		function ($scope, zonaService, $stateParams, $location) {
-		
+
 	}])
-	.filter('capitalize', function () {
-				return function (input) {
-					return (!!input) ? input.charAt(0).toUpperCase(): '';
-				}
-			});
+	

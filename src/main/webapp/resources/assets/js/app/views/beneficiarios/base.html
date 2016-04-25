@@ -1,0 +1,85 @@
+<div class="row">
+	<div class="col-md-12">
+		<header id="topbar" class="alt">
+			<div class="topbar-left">
+				<ol class="breadcrumb">
+					<li class="text-system">
+						<a ui-sref="main.zonas">
+							<span class="fa fa-map-marker"></span>
+						</a>
+					</li>
+					<li class="breadcrumb-active">
+						<a class="text-system">Beneficiarios</a>
+					</li>
+
+				</ol>
+			</div>
+			<div class="topbar-right">
+
+				<div class="btn-group">
+					<a class="btn btn-primary" ui-sref="main.beneficiarios.crear">
+						<i class="fa fa-plus"></i>
+					</a>
+
+				</div>
+
+			</div>
+		</header>
+	</div>
+</div>
+<br>
+
+
+<div ui-view>
+
+	<div class="chute chute-center" style="height: 830px;">
+
+		<!-- -------------- Basic FooTable -------------- -->
+		<div class="panel" id="spy1">
+			<div class="panel-heading">
+				<span class="panel-title">Listado de beneficiarios</span>
+			</div>
+			<div class="panel-body pn">
+				<div class="table-responsive">
+					<table class="table footable no-paging footable-loaded">
+						<thead>
+							<tr>
+								<th class="footable-sortable">Identificacion<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable footable-sorted-desc">Primer nombre<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Segundo nombre<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Primer apellido<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Segundo apellido<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Zona<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Sexo<span class="footable-sort-indicator"></span></th>
+								<th class="footable-sortable">Telefono<span class="footable-sort-indicator"></span></th>
+							</tr>
+						</thead>
+						<tbody>
+
+
+
+
+
+
+							<tr class="footable-even" style="display: table-row;" ng-repeat="beneficiario in beneficiarios">
+								<td><span class="footable-toggle"></span>{{beneficiario.identificacion}}</td>
+								<td>{{beneficiario.primer_nombre}}</td>
+								<td>{{beneficiario.segundo_nombre}}</td>
+								<td>{{beneficiario.primer_apellido}}</td>
+								<td>{{beneficiario.segundo_apellido}}</td>
+								<td>{{beneficiario.zona.nombre}}</td>
+								<td>{{beneficiario.sexo}}</td>
+								<td>{{beneficiario.telefono}}</td>
+								
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>

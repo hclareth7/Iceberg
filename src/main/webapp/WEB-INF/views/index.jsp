@@ -42,33 +42,68 @@
 
 	<!--Scripts  -->
 
-	<script src="assets/js/libs/jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="assets/js/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="assets/js/libs/jquery-ui.min.js" type="text/javascript"></script>
+
+	<!--ANGULA JS-->
 	<script src="assets/js/libs/angular.min.js" type="text/javascript"></script>
 	<script src="assets/js/libs/angular-ui-router.min.js" type="text/javascript"></script>
 
-	<script src="assets/js/libs/jquery-ui.min.js" type="text/javascript"></script>
+
 
 	<script src="assets/js/libs/moment.min.js"></script>
-
 	<script src="assets/js/libs/jquery.validate.min.js"></script>
 	<script src="assets/js/libs/jquery.steps.min.js"></script>
-
 	<script src="assets/js/libs/jquery.magnific-popup.js"></script>
-
 	<script src="assets/js/libs/bootstrap-datetimepicker.min.js"></script>
-	<!-- -------------- HighCharts Plugin -------------- -->
+	<!-- -------------- -------------- -->
 
-	<!-- -------------- Plugins -------------- -->
+	<!-- -------------- HighCharts Plugin -------------- -->
+	<script src="assets/js/libs/plugins/highcharts/highcharts.js"></script>
+	<script src="assets/js/libs/plugins/c3charts/d3.min.js"></script>
+	<script src="assets/js/libs/plugins/c3charts/c3.min.js"></script>
+
+	<!-- -------------- Simple Circles Plugin -------------- -->
+	<script src="assets/js/libs/plugins/circles/circles.js"></script>
+
+	<!-- -------------- Maps JSs -------------- -->
+
+
+
+	<!-- -------------- FullCalendar Plugin -------------- -->
+	<script src="assets/js/libs/plugins/fullcalendar/lib/moment.min.js"></script>
+	<script src="assets/js/libs/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+	<!-- -------------- Date/Month - Pickers -------------- -->
+	<script src="assets/js/libs/plugins/form/jquery-ui-monthpicker.min.js"></script>
+	<script src="assets/js/libs/plugins/form/jquery-ui-datepicker.min.js"></script>
+
+	<!-- -------------- Magnific Popup Plugin -------------- -->
+	<script src="assets/js/libs/plugins/magnific/jquery.magnific-popup.js"></script>
 
 
 	<!-- -------------- Theme Scripts -------------- -->
 	<script src="assets/js/libs/utility.js"></script>
-	<!------------------JQ------------------->
-	
-		<script src="assets/js/jq/index.js"></script>
-		<script src="assets/js/jq/zonas/jqzona.js"></script>
+	<script src="assets/js/libs/demo.js"></script>
+	<script src="assets/js/libs/main.js"></script>
 
+
+
+	<!-- -------------- Widget JS -------------- -->
 	
+	<script src="assets/js/libs/dashboard1.js"></script>
+	<!-- -------------- /Scripts -------------- -->
+
+
+
+
+
+	<!------------------JQ------------------->
+
+	<script src="assets/js/jq/index.js"></script>
+	<script src="assets/js/jq/zonas/jqzona.js"></script>
+
+
 	<!------------------Fin JQ------------------->
 
 	<!-- -------------- Angular Js  Scripts -------------- -->
@@ -76,9 +111,11 @@
 	<script src="assets/js/app/moduleRegistration.js"></script>
 	<script src="assets/js/app/services/authService.js"></script>
 	<script src="assets/js/app/services/zonaService.js"></script>
-	
+	<script src="assets/js/app/services/beneficiarioService.js"></script>
+
 	<script src="assets/js/app/controllers/loginController.js"></script>
 	<script src="assets/js/app/controllers/zonaController.js"></script>
+	<script src="assets/js/app/controllers/beneficiarioController.js"></script>
 	<script src="assets/js/app/app.js"></script>
 
 
