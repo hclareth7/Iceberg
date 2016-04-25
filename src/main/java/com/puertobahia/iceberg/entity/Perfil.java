@@ -7,7 +7,6 @@ package com.puertobahia.iceberg.entity;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,7 +29,7 @@ public class Perfil implements Serializable {
     private Long id;
     private String nombre;
     private String descripcion;
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany
     @JoinTable(name = "perfiles_acciones",
             joinColumns = {
                 @JoinColumn(name = "perfiles_id")},

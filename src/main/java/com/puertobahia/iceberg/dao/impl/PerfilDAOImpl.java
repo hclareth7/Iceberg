@@ -32,6 +32,7 @@ public class PerfilDAOImpl implements PerfilDAO {
     @Override
     public List<Perfil> getAllPerfil() {
         Criteria crit = getSession().createCriteria(Perfil.class);
+         
         return crit.list();
     }
 

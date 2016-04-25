@@ -136,7 +136,7 @@
                         }
                         return false;
                     });
-                }
+                } 
 
 
                 $dockHeader.append('<div class="title-text">' + ($this.options.title || $this.attr("title")) + '</div>');
@@ -1887,10 +1887,10 @@ function native(obj, name) {
     return void 0;
 }var ua = navigator.userAgent;
 var fsEnabled = native('fullscreenEnabled');
-var IS_ANDROID_CHROME = ua.indexOf('Android') !== -1 && ua.indexOf('Chrome') !== -1;
-var IS_NATIVELY_SUPPORTED =
+var IS_ANDROID_CHROME = ua.indexOf('Android') !== -1 && ua.indexOf('Chrome') !== -1; 
+var IS_NATIVELY_SUPPORTED = 
 		!IS_ANDROID_CHROME &&
-		 defined(native('fullscreenElement')) &&
+		 defined(native('fullscreenElement')) && 
 		(!defined(fsEnabled) || fsEnabled === true);
 
 var version = $.fn.jquery.split('.');
@@ -1917,7 +1917,7 @@ FullScreenAbstract.prototype = {
 		// Disable ability
 		this.__documentOverflow = $('body')[0].style.overflow;
 		this.__htmlOverflow = $('html')[0].style.overflow;
-
+		
 	},
 	_allowDocumentScroll: function() {
 		$('body')[0].style.overflow = this.__documentOverflow;
@@ -2082,8 +2082,8 @@ extend(FullScreenFallback, FullScreenAbstract, {
 	element: function() {
 		return this.__isFullScreen ? this._fullScreenElement : null;
 	}
-});$.fullscreen = IS_NATIVELY_SUPPORTED
-				? new FullScreenNative()
+});$.fullscreen = IS_NATIVELY_SUPPORTED 
+				? new FullScreenNative() 
 				: new FullScreenFallback();
 
 $.fn.fullscreen = function(options) {
