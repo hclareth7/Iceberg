@@ -36,7 +36,7 @@
 	<!-- -------------- /Body Wrap  -------------- -->
 
 	<script>
-		apiUrl = "${apiUrl}";
+		apiUrl = "${apiUrl}"
 	</script>
 
 
