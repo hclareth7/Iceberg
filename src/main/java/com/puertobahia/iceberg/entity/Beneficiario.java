@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -47,10 +48,10 @@ public class Beneficiario implements Serializable {
     @Lob
     private String datos_ficha;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Zona zona;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
     @JoinTable(name = "beneficiarios_programas",
             joinColumns = {
                 @JoinColumn(name = "beneficiarios_id")},
@@ -59,7 +60,7 @@ public class Beneficiario implements Serializable {
     private List<Programa> programas;
 
 
-    @OneToMany(mappedBy = "beneficiario", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "beneficiario", cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Asistencia> asistencias;
 
     public Long getId() {

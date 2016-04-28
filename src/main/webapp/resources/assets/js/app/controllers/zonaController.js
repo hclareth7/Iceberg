@@ -14,8 +14,8 @@ controllerModule
 
 			};
 
-			//$scope.getAllZonas();
-			//
+			$scope.getAllZonas();
+		
 
     }])
 	.controller('zonaDetalleController', ['$scope', 'zonaService',

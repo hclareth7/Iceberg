@@ -5,10 +5,13 @@
  */
 package com.puertobahia.iceberg.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -30,22 +33,23 @@ public class Zona implements Serializable {
     private String nombre;
     @Lob
     private String descripcion;
-
-    @OneToOne(mappedBy = "zona")
+    @JsonManagedReference
+    @OneToOne(mappedBy = "zona", fetch = FetchType.LAZY)
     private Usuario usuario;
 
-    @OneToOne(mappedBy = "zona")
+    @OneToOne(mappedBy = "zona", fetch = FetchType.LAZY)
     private Beneficiario benficiarios;
 
-    @OneToMany( mappedBy = "zona")
+    @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
     List<Programacion> programaciones;
-    
-    @OneToMany( mappedBy = "zona")
+
+    @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
     List<ConsejoComunitario> consejos_comunitario;
 
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -97,7 +101,5 @@ public class Zona implements Serializable {
     public void setConsejos_comunitario(List<ConsejoComunitario> consejos_comunitario) {
         this.consejos_comunitario = consejos_comunitario;
     }
-    
-    
 
 }

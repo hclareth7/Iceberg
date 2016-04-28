@@ -7,6 +7,7 @@ package com.puertobahia.iceberg.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -23,10 +24,10 @@ public class ObjetivoHasIndicador implements Serializable{
     @Id
     @GeneratedValue
     private Long id;
-     @ManyToOne
+     @ManyToOne(fetch = FetchType.LAZY)
     private Objetivo objetivo;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Indicador indicador;
 
     public Long getId() {

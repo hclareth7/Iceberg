@@ -9,8 +9,10 @@ import com.puertobahia.iceberg.dao.ZonaDAO;
 import com.puertobahia.iceberg.entity.Zona;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.FetchMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.CriteriaSpecification;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,6 +34,9 @@ public class ZonaDAOImpl implements ZonaDAO {
     @Override
     public List<Zona> getAllZona() {
         Criteria crit = getSession().createCriteria(Zona.class);
+        crit.setFetchMode("usuario", FetchMode.JOIN);
+        crit.setFetchMode("usuario.empleado", FetchMode.JOIN)
+                .setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
         return crit.list();
     }
 

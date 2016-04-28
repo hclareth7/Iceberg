@@ -20,7 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class PagesController {
 
     //private final String apiUrl = "http://hclareth7.me:8080/Iceberg/";
-    private final String apiUrl = "http://localhost:8080/Iceberg/";
+    //private final String apiUrl = "http://localhost:8080/Iceberg/";
+    private final String apiUrl = "http://localhost:8085/Iceberg/";
 
     @RequestMapping(value = "/")
     public ModelAndView getHomePage() {

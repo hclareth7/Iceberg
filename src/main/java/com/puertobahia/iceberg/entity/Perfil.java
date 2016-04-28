@@ -8,6 +8,7 @@ package com.puertobahia.iceberg.entity;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -29,7 +30,7 @@ public class Perfil implements Serializable {
     private Long id;
     private String nombre;
     private String descripcion;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "perfiles_acciones",
             joinColumns = {
                 @JoinColumn(name = "perfiles_id")},
@@ -37,7 +38,7 @@ public class Perfil implements Serializable {
                 @JoinColumn(name = "acciones_id")})
     private List<Accion> acciones;
 
-    @OneToMany(mappedBy = "perfil")
+    @OneToMany(mappedBy = "perfil", fetch = FetchType.LAZY)
     private List<Usuario> usuarios;
 
     public Long getId() {

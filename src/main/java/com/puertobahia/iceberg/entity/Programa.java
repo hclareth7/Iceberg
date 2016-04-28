@@ -8,6 +8,7 @@ package com.puertobahia.iceberg.entity;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -27,10 +28,10 @@ public class Programa implements Serializable{
     private Long id;
     private String nombre;
     private String descripcion;
-    @ManyToMany(mappedBy="programas")
+    @ManyToMany(mappedBy="programas", fetch = FetchType.LAZY)
     private List<Beneficiario> beneficiarios;
 
-    @OneToMany(mappedBy = "programa")
+    @OneToMany(mappedBy = "programa", fetch = FetchType.LAZY)
     private List<Actividad>actividades;
 
     public Long getId() {

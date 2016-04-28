@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "F:/Software Engineering - Developer/Projects/Puerto Bahia/Iceberg/target/Iceberg-1.0-SNAPSHOT/resources/assets/js/libs/plugins/ladda/ladda.min.js",
+        "F:/Software Engineering - Developer/Projects/Puerto Bahia/Iceberg/target/Iceberg-1.0-SNAPSHOT/resources/assets/js/libs/plugins/globalize/globalize.min.js"
+    ]
+}

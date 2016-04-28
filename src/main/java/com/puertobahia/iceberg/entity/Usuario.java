@@ -5,8 +5,10 @@
  */
 package com.puertobahia.iceberg.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -26,11 +28,12 @@ public class Usuario implements Serializable{
     private Long id;
     private String usuario;
     private String contrasena;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Empleado empleado;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Perfil perfil;
-    @OneToOne
+    @JsonBackReference
+    @OneToOne (fetch = FetchType.LAZY)
     private Zona zona;
 
     public Long getId() {

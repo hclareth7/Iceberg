@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -37,13 +38,13 @@ public class Programacion implements Serializable{
     @Lob
     private String observaciones;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Actividad actividad;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Zona zona;
 
-    @OneToMany(mappedBy = "programacion", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "programacion", cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Asistencia> asistencias;
 
     public Long getId() {

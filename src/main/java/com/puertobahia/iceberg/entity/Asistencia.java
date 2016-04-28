@@ -7,6 +7,7 @@ package com.puertobahia.iceberg.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -25,10 +26,10 @@ public class Asistencia implements Serializable{
     private Long id;
     private int asistio;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Programacion programacion;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Beneficiario beneficiario;
 
     public Long getId() {
