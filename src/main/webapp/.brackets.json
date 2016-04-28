@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/libs/widgets_sidebar.js",
+        "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/app/controllers/loginController.js",
+        "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/libs/widgets.js"
+    ]
+}

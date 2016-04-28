@@ -39,17 +39,16 @@
 					<span class="panel-title">Consejo comunitario</span>
 				</div>
 				<div class="panel-body">
-					<div class="well blockquote-rounded mv20">
+					<div class="well blockquote-rounded mv20" ng-repeat="consejo in zona.consejos_comunitario">
 						<address>
 							<strong>Presidente</strong>
-							<br>{{zonazcxxzss}}
-							<br>Tel: 310 6672097
+							<br>{{consejo.presidente}}
+							<br>Tel: {{consejo.contacto}}
 							<br>
 						</address>
 						<address>
 							<strong>Miembros</strong>
-							<br>Juan pablo perez
-							<br>Juan pablo perez
+							<br>{{consejo.participantes}}
 							
 							
 						</address>
