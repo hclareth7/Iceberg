@@ -5,8 +5,10 @@
  */
 package com.puertobahia.iceberg.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -25,6 +27,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "zonas")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Zona implements Serializable {
 
     @Id
@@ -42,7 +45,8 @@ public class Zona implements Serializable {
 
     @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
     List<Programacion> programaciones;
-
+    
+    @JsonManagedReference
     @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
     List<ConsejoComunitario> consejos_comunitario;
 

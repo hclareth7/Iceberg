@@ -5,6 +5,7 @@
  */
 package com.puertobahia.iceberg.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -31,7 +32,7 @@ public class ConsejoComunitario {
     @Lob
     private String participantes;
     private int estado;
-    
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     private Zona zona;
 

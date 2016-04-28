@@ -9,6 +9,7 @@ import com.puertobahia.iceberg.dao.UsuarioDAO;
 import com.puertobahia.iceberg.entity.Usuario;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.FetchMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -32,6 +33,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     @Override
     public List<Usuario> getAllUsuario() {
         Criteria crit = getSession().createCriteria(Usuario.class);
+        crit.setFetchMode("zona", FetchMode.JOIN);
         return crit.list();
     }
 
