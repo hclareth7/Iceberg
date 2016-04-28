@@ -63,4 +63,4 @@ icebergApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvi
 			controller: 'beneficiarioCrearController'
 		})
 
-}])
+}]);
