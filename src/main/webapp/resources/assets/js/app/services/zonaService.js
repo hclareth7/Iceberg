@@ -10,7 +10,7 @@ servicesModule.factory('zonaService', ['$http', function ($http) {
 				
             },
             createZona: function (zona) {
-                return $http.put(this.apiUrl + 'zona/', zona);
+                return $http.post(this.apiUrl + 'zona/', zona);
             }
         };
     }]);

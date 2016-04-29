@@ -6,6 +6,7 @@
 package com.puertobahia.iceberg.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "consejos_comunitarios")
-public class ConsejoComunitario {
+public class ConsejoComunitario implements Serializable{
     
     @Id
     @GeneratedValue

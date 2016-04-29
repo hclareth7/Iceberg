@@ -8,6 +8,7 @@ package com.puertobahia.iceberg.dao.impl;
 import com.puertobahia.iceberg.dao.ZonaDAO;
 import com.puertobahia.iceberg.entity.ConsejoComunitario;
 import com.puertobahia.iceberg.entity.Zona;
+import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.FetchMode;
@@ -28,6 +29,8 @@ public class ZonaDAOImpl implements ZonaDAO {
 
     @Autowired
     SessionFactory sessionFactory;
+    @Autowired
+    ConsejoComunitarioDAOImpl consejo;
 
     private Session getSession() {
         return sessionFactory.getCurrentSession();
@@ -51,17 +54,17 @@ public class ZonaDAOImpl implements ZonaDAO {
         crit.setFetchMode("consejos_comunitario", FetchMode.JOIN);
         crit.createAlias("consejos_comunitario", "consejo", JoinType.LEFT_OUTER_JOIN);
         crit.add(Restrictions.or(
-                Restrictions.and(Restrictions.eq("consejo.estado", 0)),Restrictions.isNull("consejo.estado")));
+                Restrictions.and(Restrictions.eq("consejo.estado", 0)), Restrictions.isNull("consejo.estado")));
         return (Zona) crit.uniqueResult();
         /*Criteria crit = getSession().createCriteria(Zona.class);
-        crit.add(Restrictions.idEq(id));
-        crit.setFetchMode("usuario", FetchMode.JOIN);
-        crit.setFetchMode("usuario.empleado", FetchMode.JOIN);
-        crit.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
-        Zona zona = (Zona) crit.uniqueResult();
-        Criteria crit2 = getSession().createCriteria(ConsejoComunitario.class);
-        zona.setConsejos_comunitario(crit2.add(Restrictions.and(Restrictions.idEq(zona.getId()),Restrictions.eq("estado", 0))).list());
-        return zona;*/
+         crit.add(Restrictions.idEq(id));
+         crit.setFetchMode("usuario", FetchMode.JOIN);
+         crit.setFetchMode("usuario.empleado", FetchMode.JOIN);
+         crit.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
+         Zona zona = (Zona) crit.uniqueResult();
+         Criteria crit2 = getSession().createCriteria(ConsejoComunitario.class);
+         zona.setConsejos_comunitario(crit2.add(Restrictions.and(Restrictions.idEq(zona.getId()),Restrictions.eq("estado", 0))).list());
+         return zona;*/
     }
 
     @Override
@@ -74,6 +77,11 @@ public class ZonaDAOImpl implements ZonaDAO {
         Zona zona = new Zona();
         zona.setId(id);
         getSession().delete(zona);
+    }
+
+    @Override
+    public void save(Zona zona) {
+        getSession().save(zona);
     }
 
 }

@@ -11,18 +11,17 @@ import com.puertobahia.iceberg.entity.Zona;
 import com.puertobahia.iceberg.service.ZonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/zona")
 public class ZonaController {
     
@@ -31,7 +30,7 @@ public class ZonaController {
     
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.GET)
-    public @ResponseBody List<Zona> getAllZona() {
+    public List<Zona> getAllZona() {
         return zonaService.getAllZona();
         //return "HOLA";
     }
@@ -39,7 +38,7 @@ public class ZonaController {
    
     
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
-    public @ResponseBody Zona getZonaById(@PathVariable Long id) {
+    public Zona getZonaById(@PathVariable Long id) {
         
         Zona zona = zonaService.getById(id);
         if (zona!=null) {
@@ -52,14 +51,14 @@ public class ZonaController {
         
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT)
-    public @ResponseBody Zona createZona(@RequestBody Zona zona) {
-        zonaService.saveOrUpdate(zona);
+    @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
+    public Zona createZona(@RequestBody Zona zona) {
+        zonaService.save(zona);
         return zona;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.POST)
-    public @ResponseBody Zona updateZona(@RequestBody Zona zona) {
+    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
+    public Zona updateZona(@RequestBody Zona zona) {
         zonaService.saveOrUpdate(zona);
         return zona;
     }

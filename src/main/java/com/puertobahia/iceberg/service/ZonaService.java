@@ -19,6 +19,7 @@ public interface ZonaService {
     public Zona getById(Long id);
 
     public void saveOrUpdate(Zona zona);
+    public void save(Zona zona);
 
     public void delete(Long id);
 }

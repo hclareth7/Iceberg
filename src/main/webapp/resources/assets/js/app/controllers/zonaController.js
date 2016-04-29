@@ -15,7 +15,7 @@ controllerModule
 			};
 
 			$scope.getAllZonas();
-		
+
 
     }])
 	.controller('zonaDetalleController', ['$scope', 'zonaService',
@@ -40,5 +40,17 @@ controllerModule
 	.controller('zonaCrearController', ['$scope', 'zonaService', '$stateParams', '$location',
 		function ($scope, zonaService, $stateParams, $location) {
 
+			$scope.saveZona = function () {
+				var consejos_comunitario = [
+					$scope.consejo
+				];
+
+				$scope.zona.usuario = {};
+				$scope.zona.beneficiarios = {};
+				$scope.zona.programaciones = [];
+				$scope.zona.consejos_comunitario = consejos_comunitario;
+				zonaService.createZona($scope.zona);
+				console.log($scope.zona);
+			};
+
 	}])
-	

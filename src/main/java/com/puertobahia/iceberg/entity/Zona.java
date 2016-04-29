@@ -5,8 +5,8 @@
  */
 package com.puertobahia.iceberg.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.io.Serializable;
@@ -41,13 +41,14 @@ public class Zona implements Serializable {
     private Usuario usuario;
 
     @OneToOne(mappedBy = "zona", fetch = FetchType.LAZY)
-    private Beneficiario benficiarios;
+    private Beneficiario beneficiarios;
 
     @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
     List<Programacion> programaciones;
-    
+
+    @JsonIgnore//Funciona el insert
     @JsonManagedReference
-    @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     List<ConsejoComunitario> consejos_comunitario;
 
     public Long getId() {
@@ -82,12 +83,12 @@ public class Zona implements Serializable {
         this.usuario = usuario;
     }
 
-    public Beneficiario getBenficiarios() {
-        return benficiarios;
+    public Beneficiario getBeneficiarios() {
+        return beneficiarios;
     }
 
-    public void setBenficiarios(Beneficiario benficiarios) {
-        this.benficiarios = benficiarios;
+    public void setBeneficiarios(Beneficiario beneficiarios) {
+        this.beneficiarios = beneficiarios;
     }
 
     public List<Programacion> getProgramaciones() {
