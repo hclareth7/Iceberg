@@ -50,6 +50,11 @@ public class Zona implements Serializable {
     @JsonManagedReference
     @OneToMany(mappedBy = "zona", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     List<ConsejoComunitario> consejos_comunitario;
+    private final int b=98;
+
+    public Zona(int b){
+        b=this.b;
+    }
 
     public Long getId() {
         return id;
