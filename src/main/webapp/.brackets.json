@@ -2,6 +2,17 @@
     "jscodehints.detectedExclusions": [
         "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/libs/widgets_sidebar.js",
         "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/app/controllers/loginController.js",
-        "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/libs/widgets.js"
+        "D:/Apps/Iceberg/src/main/webapp/resources/assets/js/libs/widgets.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/widgets_sidebar.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/xeditable/inputs/typeaheadjs/typeaheadjs.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/xeditable/inputs/address/address.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/app/app.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/datatables/media/js/dataTables.bootstrap.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/xeditable/js/bootstrap-editable.min.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/fullcalendar/lib/moment.min.js",
+        "C:/Users/Invitado/Documents/Proyectos/Iceberg/src/main/webapp/resources/assets/js/libs/plugins/footable/js/footable.filter.min.js"
     ]
 }

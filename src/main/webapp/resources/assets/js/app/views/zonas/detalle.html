@@ -6,10 +6,10 @@
 					<img src="assets/img/ic_zona.png" class="ic-zona center-block">
 					<div class="tools-zonas">
 						<h3 class="text-rigth text-center">{{zona.nombre}}</h3>
-						<h5 class="text-rigth text-center text-system">{{zona.usuario.empleado.primer_nombre +' '
+						<h5 class="text-rigth text-center text-system text-capitalize">{{zona.usuario.empleado.primer_nombre +' '
                             +zona.usuario.empleado.segundo_nombre +' '+zona.usuario.empleado.primer_apellido +'  '+zona.usuario.empleado.segundo_apellido}}</h5>
-						<button type="button" class="btn btn-primary btn-block">Editar</button>
-						<button type="button" class="btn btn-danger btn-block">Eliminar</button>
+						<button type="button" class="btn btn-primary btn-block" ui-sref="main.zonas.editar({zonaId:zona.id})">Editar</button>
+						<button type="button" class="btn btn-danger btn-block" ng-click="removeZona(zona.id)">Eliminar</button>
 
 					</div>
 				</div>

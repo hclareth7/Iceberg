@@ -155,7 +155,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--Jetty plugin-->
+            <!--Tomcat plugin-->
             
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>

@@ -59,7 +59,14 @@ public class ZonaController {
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
     public Zona updateZona(@RequestBody Zona zona) {
-        zonaService.saveOrUpdate(zona);
+        zonaService.update(zona);
+        return zona;
+    }
+    
+    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE, consumes = "application/json")
+    public Zona DeleteZona(@PathVariable Long id) {
+        Zona zona=new Zona();
+        zonaService.delete(id);
         return zona;
     }
     

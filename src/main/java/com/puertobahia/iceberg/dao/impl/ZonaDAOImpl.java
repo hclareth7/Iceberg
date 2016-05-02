@@ -84,4 +84,9 @@ public class ZonaDAOImpl implements ZonaDAO {
         getSession().save(zona);
     }
 
+    @Override
+    public void update(Zona zona) {
+        getSession().update(zona);
+    }
+
 }

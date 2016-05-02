@@ -49,5 +49,10 @@ public class ZonaServiceImpl implements ZonaService {
         zonaDAO.save(zona);
     }
 
+    @Override
+    public void update(Zona zona) {
+        zonaDAO.update(zona);
+    }
+
     
 }

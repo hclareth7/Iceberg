@@ -18,6 +18,7 @@ public interface ZonaDAO {
     public Zona getById(Long id);
 
     public void save(Zona zona);
+    public void update(Zona zona);
     public void saveOrUpdate(Zona zona);
 
     public void delete(Long id);
