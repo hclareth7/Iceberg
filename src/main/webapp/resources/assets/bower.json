@@ -1,0 +1,25 @@
+{
+    "name": "Iceberg",
+    "homepage": "https://github.com/hariza17/Iceberg",
+    "description": "Iceberg",
+    "main": "index.jsp",
+    "authors": [
+    "Hernando Clareth Ariza Perez"
+  ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+        "lodash": "^4.11.2",
+        "angular-toastr": "~1.7.0",
+        "angular-animate": "~1.5.5",
+        "angular-ui-router": "~0.2.18",
+        "angular": "~1.5.5"
+    }
+}

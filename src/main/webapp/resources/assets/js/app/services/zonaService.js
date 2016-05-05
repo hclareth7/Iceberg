@@ -15,7 +15,7 @@ servicesModule.factory('zonaService', ['$http', function ($http) {
         updateZona: function (zona) {
             return $http.put(this.apiUrl + 'zona/', zona);
         },
-        deleteZona: function (zonaId) {
+        deleteZona: function (zonaId,zona) {
             return $http.delete(this.apiUrl + 'zona/' + zonaId);
         }
     };

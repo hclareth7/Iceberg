@@ -8,7 +8,9 @@
 var icebergApp = angular.module("icebergApp", [
     'ui.router',
 	'AppControllers',
-	'AppServices'
+	'AppServices',
+    'ngAnimate',
+    'toastr'
 ]);
 
 icebergApp.filter('capitalize', function () {
@@ -17,7 +19,17 @@ icebergApp.filter('capitalize', function () {
     }
 });
 
-icebergApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+icebergApp.config(['$stateProvider', '$urlRouterProvider','toastrConfig', function ($stateProvider, $urlRouterProvider,toastrConfig) {
+        angular.extend(toastrConfig, {
+        autoDismiss: false,
+        containerId: 'toast-container',
+        maxOpened: 0,
+        newestOnTop: true,
+        positionClass: 'toast-top-right',
+        preventDuplicates: false,
+        preventOpenDuplicates: false,
+        target: 'body'
+    });
 
     $urlRouterProvider.otherwise('/login');
 

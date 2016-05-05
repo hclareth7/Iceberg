@@ -35,7 +35,6 @@ public class Usuario implements Serializable{
     private Empleado empleado;
     @ManyToOne(fetch = FetchType.LAZY)
     private Perfil perfil;
-
     @OneToOne 
     private Zona zona;
 

@@ -11,6 +11,8 @@ import com.puertobahia.iceberg.entity.Zona;
 import com.puertobahia.iceberg.service.ZonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,11 +65,11 @@ public class ZonaController {
         return zona;
     }
     
-    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE, consumes = "application/json")
-    public Zona DeleteZona(@PathVariable Long id) {
-        Zona zona=new Zona();
+    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE)
+    public ResponseEntity<Zona> DeleteZona(@PathVariable("id") Long id) {
+
         zonaService.delete(id);
-        return zona;
+        return new ResponseEntity<Zona>(HttpStatus.NO_CONTENT);
     }
     
     

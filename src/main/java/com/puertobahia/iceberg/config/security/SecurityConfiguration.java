@@ -38,8 +38,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/**").permitAll()
                 .anyRequest().authenticated().and()
-                .csrf().csrfTokenRepository(csrfTokenRepository()).and()
-                .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
+                .csrf().disable();
+//                .csrf().csrfTokenRepository(csrfTokenRepository()).and()
+//                .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
     }
 
     private CsrfTokenRepository csrfTokenRepository() {

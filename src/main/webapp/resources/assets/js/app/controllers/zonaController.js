@@ -2,13 +2,13 @@ var controllerModule = angular.module('AppControllers');
 
 controllerModule
     .controller('zonaController', ['$scope', 'zonaService',
-    '$stateParams',
-    function ($scope, zonaService, $stateParams) {
-            $scope.zonas = [];
+    '$stateParams', '$rootScope',
+    function ($scope, zonaService, $stateParams, $rootScope) {
+            $rootScope.zonas = [];
             $scope.getAllZonas = function () {
                 zonaService.getAllZona().then(function (response) {
                     console.log(response.data);
-                    $scope.zonas = response.data;
+                    $rootScope.zonas = response.data;
 
                 });
 
@@ -19,15 +19,15 @@ controllerModule
 
     }])
     .controller('zonaDetalleController', ['$scope', 'zonaService',
-    '$stateParams', '$location',
-	function ($scope, zonaService, $stateParams, $location) {
+    '$stateParams', '$location', 'toastr', '$rootScope',
+	function ($scope, zonaService, $stateParams, $location, toastr, $rootScope) {
 
             $scope.getZona = function (zonaId) {
-                zonaService.getZonaById(zonaId).then(function successCallBack(response) {
+                zonaService.getZonaById(zonaId).then(function (response) {
                     $scope.zona = response.data;
                     console.log(response.data);
 
-                }, function errorCallBack(response) {
+                }, function (response) {
                     console.log(response);
                     $location.path('/app/zona');
                     console.log($location);
@@ -37,12 +37,15 @@ controllerModule
             $scope.getZona(parseInt($stateParams.zonaId));
             //Metodo para eliminar la Zona
             $scope.removeZona = function (zonaId) {
-                zonaService.deleteZona(zonaId).then(function successCallBack(response) {
-                    
+                zonaService.deleteZona(zonaId).then(function (response) {
+                   /* _.remove($rootScope.zonas, function (e) {
+                        return e.id == zonaId;
+                    });*/
                     $location.path('/app/zona');
-                    console.log(response.data);
+                    toastr.success('Exito', 'Zona eliminada');
 
-                }, function errorCallBack(response) {
+
+                }, function (response) {
                     console.log(response);
                     $location.path('/app/zona');
                     console.log($location);
@@ -51,42 +54,47 @@ controllerModule
             };
 
 	}])
-    .controller('zonaCrearController', ['$scope', 'zonaService', '$stateParams', '$location',
-		function ($scope, zonaService, $stateParams, $location) {
+    .controller('zonaCrearController', ['$scope', 'zonaService', '$stateParams', '$location', 'toastr', '$rootScope',
+		function ($scope, zonaService, $stateParams, $location, toastr, $rootScope) {
             $scope.titulo = "Crear nueva zona";
-            $scope.boton = "Actualizar";
+            $scope.boton = "Guardar";
             $scope.saveZona = function () {
-                zonaService.createZona($scope.zona);
-                console.log($scope.zona);
+                zonaService.createZona($scope.zona).then(function () {
+                    $rootScope.zonas.push($scope.zona);
+                    $scope.zona = {};
+                    toastr.success('Exito', 'Zona creada');
+                });
+
             };
 
 	}])
 
-.controller('zonaEditarController', ['$scope', 'zonaService', '$stateParams', '$location',
-		function ($scope, zonaService, $stateParams, $location) {
+.controller('zonaEditarController', ['$scope', 'zonaService', '$stateParams', '$location', 'toastr', '$rootScope',
+		function ($scope, zonaService, $stateParams, $location, toastr, $rootScope) {
 
         $scope.getZona = function (zonaId) {
             zonaService.getZonaById(zonaId).then(function successCallBack(response) {
                 $scope.zona = response.data;
-                console.log(response.data);
-
             }, function errorCallBack(response) {
                 console.log(response);
                 $location.path('/app/zona');
-                console.log($location);
             });
         };
-
         $scope.getZona(parseInt($stateParams.zonaId));
-
         $scope.titulo = "Crear nueva zona";
         $scope.boton = "Actualizar";
 
         $scope.saveZona = function () {
             $scope.zona.usuario = {};
             $scope.zona.consejos_comunitario = [];
-            zonaService.updateZona($scope.zona);
-            console.log($scope.zona);
+            zonaService.updateZona($scope.zona).then(function (response) {
+                var index = _.indexOf($rootScope.zonas, _.find($rootScope.zonas, {
+                    id: $scope.zona.id
+                }));
+                $rootScope.zonas.splice(index, $scope.zona.id, $scope.zona);
+                toastr.success('Exito', 'Zona actualizada');
+                $location.path('/app/zona');
+            });
         };
 
 	}])
