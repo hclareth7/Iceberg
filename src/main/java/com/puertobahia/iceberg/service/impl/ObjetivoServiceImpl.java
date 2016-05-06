@@ -44,4 +44,14 @@ public class ObjetivoServiceImpl implements ObjetivoService{
     public void delete(Long id) {
         objetivoDAO.delete(id);
     }
+
+    @Override
+    public void save(Objetivo objetivo) {
+        objetivoDAO.save(objetivo);
+    }
+
+    @Override
+    public void update(Objetivo objetivo) {
+        objetivoDAO.update(objetivo);
+    }
 }

@@ -44,4 +44,14 @@ public class BeneficiarioServiceImpl implements BeneficiarioService{
     public void delete(Long id) {
         beneficiarioDAO.delete(id);
     }
+
+    @Override
+    public void save(Beneficiario beneficiario) {
+        beneficiarioDAO.save(beneficiario);
+    }
+
+    @Override
+    public void update(Beneficiario beneficiario) {
+        beneficiarioDAO.update(beneficiario);
+    }
 }

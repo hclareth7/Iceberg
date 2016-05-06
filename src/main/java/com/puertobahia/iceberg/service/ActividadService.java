@@ -17,6 +17,8 @@ public interface ActividadService {
     
     public List<Actividad> getAllActividad();
     public Actividad getById(Long id);
+    public void save(Actividad actividad);
+    public void update(Actividad actividad);
     public void saveOrUpdate(Actividad actividad);
     public void delete(Long id);
     

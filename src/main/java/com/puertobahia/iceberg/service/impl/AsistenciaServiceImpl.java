@@ -43,4 +43,14 @@ public class AsistenciaServiceImpl implements AsistenciaService{
     public void delete(Long id) {
         asistenciaDAO.delete(id);
     }
+
+    @Override
+    public void save(Asistencia asistencia) {
+        asistenciaDAO.save(asistencia);
+    }
+
+    @Override
+    public void update(Asistencia asistencia) {
+        asistenciaDAO.update(asistencia);
+    }
 }

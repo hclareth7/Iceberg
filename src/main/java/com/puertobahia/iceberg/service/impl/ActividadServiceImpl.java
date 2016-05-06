@@ -44,4 +44,14 @@ public class ActividadServiceImpl implements ActividadService{
     public void delete(Long id) {
         actividadDAO.delete(id);
     }
+
+    @Override
+    public void save(Actividad actividad) {
+        actividadDAO.save(actividad);
+    }
+
+    @Override
+    public void update(Actividad actividad) {
+        actividadDAO.update(actividad);
+    }
 }

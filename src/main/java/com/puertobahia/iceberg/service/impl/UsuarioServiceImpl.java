@@ -44,4 +44,14 @@ public class UsuarioServiceImpl implements UsuarioService{
     public void delete(Long id) {
         usuarioDAO.delete(id);
     }
+
+    @Override
+    public void save(Usuario usuario) {
+        usuarioDAO.save(usuario);
+    }
+
+    @Override
+    public void update(Usuario usuario) {
+        usuarioDAO.update(usuario);
+    }
 }

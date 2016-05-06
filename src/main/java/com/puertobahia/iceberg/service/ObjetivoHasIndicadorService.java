@@ -19,6 +19,8 @@ public interface ObjetivoHasIndicadorService {
 
     public ObjetivoHasIndicador getById(Long id);
 
+    public void save(ObjetivoHasIndicador objetivoHasIndicador);
+    public void update(ObjetivoHasIndicador objetivoHasIndicador);
     public void saveOrUpdate(ObjetivoHasIndicador objetivoHasIndicador);
 
     public void delete(Long id);

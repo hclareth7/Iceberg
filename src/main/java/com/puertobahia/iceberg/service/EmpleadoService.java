@@ -15,6 +15,8 @@ import java.util.List;
 public interface EmpleadoService {
     public List<Empleado> getAllEmpleado();
     public Empleado getById(Long id);
+    public void save(Empleado empleado);
+    public void update(Empleado empleado);
     public void saveOrUpdate(Empleado empleado);
     public void delete(Long id);
 }

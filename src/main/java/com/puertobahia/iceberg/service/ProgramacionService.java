@@ -19,6 +19,8 @@ public interface ProgramacionService {
 
     public Programacion getById(Long id);
 
+    public void save(Programacion programacion);
+    public void update(Programacion programacion);
     public void saveOrUpdate(Programacion programacion);
 
     public void delete(Long id);

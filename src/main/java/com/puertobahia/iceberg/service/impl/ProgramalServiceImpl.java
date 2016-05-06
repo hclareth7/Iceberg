@@ -43,4 +43,14 @@ public class ProgramalServiceImpl implements ProgramaService{
     public void delete(Long id) {
         programaDAO.delete(id);
     }
+
+    @Override
+    public void save(Programa programa) {
+        programaDAO.save(programa);
+    }
+
+    @Override
+    public void update(Programa programa) {
+        programaDAO.update(programa);
+    }
 }

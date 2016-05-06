@@ -44,4 +44,14 @@ public class ObjetivoHasIndicadorServiceImpl implements ObjetivoHasIndicadorServ
     public void delete(Long id) {
         objetivoHasIndicadorDAODAO.delete(id);
     }
+
+    @Override
+    public void save(ObjetivoHasIndicador objetivoHasIndicador) {
+        objetivoHasIndicadorDAODAO.save(objetivoHasIndicador);
+    }
+
+    @Override
+    public void update(ObjetivoHasIndicador objetivoHasIndicador) {
+        objetivoHasIndicadorDAODAO.update(objetivoHasIndicador);
+    }
 }

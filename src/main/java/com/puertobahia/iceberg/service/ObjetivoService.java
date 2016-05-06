@@ -18,6 +18,8 @@ public interface ObjetivoService {
 
     public Objetivo getById(Long id);
 
+    public void save(Objetivo objetivo);
+    public void update(Objetivo objetivo);
     public void saveOrUpdate(Objetivo objetivo);
 
     public void delete(Long id);

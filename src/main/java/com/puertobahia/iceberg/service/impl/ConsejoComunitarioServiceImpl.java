@@ -45,5 +45,15 @@ public class ConsejoComunitarioServiceImpl implements ConsejoComunitarioService{
     public void delete(Long id) {
         consejoComunitarioDAO.delete(id);
     }
+
+    @Override
+    public void save(ConsejoComunitario consejoComunitario) {
+        consejoComunitarioDAO.save(consejoComunitario);
+    }
+
+    @Override
+    public void update(ConsejoComunitario consejoComunitario) {
+        consejoComunitarioDAO.update(consejoComunitario);
+    }
     
 }

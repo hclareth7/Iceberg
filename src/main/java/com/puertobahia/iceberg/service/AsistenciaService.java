@@ -15,6 +15,8 @@ import java.util.List;
 public interface AsistenciaService {
     public List<Asistencia> getAllAsistencia();
     public Asistencia getById(Long id);
+    public void save(Asistencia asistencia);
+    public void update(Asistencia asistencia);
     public void saveOrUpdate(Asistencia asistencia);
     public void delete(Long id);
 }

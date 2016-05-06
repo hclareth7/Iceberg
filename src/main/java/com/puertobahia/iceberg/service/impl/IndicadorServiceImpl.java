@@ -43,4 +43,14 @@ public class IndicadorServiceImpl implements IndicadorService{
     public void delete(Long id) {
         indicadorDAO.delete(id);
     }
+
+    @Override
+    public void save(Indicador indicador) {
+        indicadorDAO.save(indicador);
+    }
+
+    @Override
+    public void update(Indicador indicador) {
+        indicadorDAO.update(indicador);
+    }
 }

@@ -19,6 +19,8 @@ public interface UsuarioService {
     public Usuario getById(Long id);
 
     public void saveOrUpdate(Usuario usuario);
+    public void save(Usuario usuario);
+    public void update(Usuario usuario);
 
     public void delete(Long id);
 }

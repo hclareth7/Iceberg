@@ -44,4 +44,15 @@ public class PerfilServiceImpl implements PerfilService{
     public void delete(Long id) {
         perfilDAO.delete(id);
     }
+
+    @Override
+    public void save(Perfil perfil) {
+        perfilDAO.save(perfil);
+    }
+
+    @Override
+    public void update(Perfil perfil) {
+        perfilDAO.update(perfil);
+        
+    }
 }

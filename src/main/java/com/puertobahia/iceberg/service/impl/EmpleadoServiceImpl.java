@@ -43,4 +43,14 @@ public class EmpleadoServiceImpl implements EmpleadoService{
     public void delete(Long id) {
         empleadoDAO.delete(id);
     }
+
+    @Override
+    public void save(Empleado empleado) {
+        empleadoDAO.save(empleado);
+    }
+
+    @Override
+    public void update(Empleado empleado) {
+        empleadoDAO.update(empleado);
+    }
 }

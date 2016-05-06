@@ -43,4 +43,14 @@ public class ProgramacionServiceImpl implements ProgramacionService{
     public void delete(Long id) {
         programacionDAO.delete(id);
     }
+
+    @Override
+    public void save(Programacion programacion) {
+        programacionDAO.save(programacion);
+    }
+
+    @Override
+    public void update(Programacion programacion) {
+        programacionDAO.update(programacion);
+    }
 }
