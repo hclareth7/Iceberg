@@ -3,3 +3,4 @@
 # Example .gitignore files: https://github.com/github/gitig
 /target/*
 /src/main/webapp/resources/assets/bower_components/*
+/src/main/java/com/puertobahia/iceberg/util/Environment.java

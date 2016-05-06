@@ -2,6 +2,7 @@ package com.puertobahia.iceberg.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.puertobahia.iceberg.util.Environment;
 import java.util.List;
 import java.util.Properties;
 import javax.sql.DataSource;
@@ -59,9 +60,9 @@ public class ApplicationContextConfig extends WebMvcConfigurerAdapter{
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         //dataSource.setUrl("jdbc:mysql://45.55.169.39:3306/iceberg"); //Server Database
         dataSource.setUrl("jdbc:mysql://localhost:3306/iceberg");//Local Database
-        dataSource.setUsername("root");
-        //dataSource.setPassword("7777777As");
-        dataSource.setPassword("123qwe");
+        dataSource.setUsername(Environment.USERROOT);
+        dataSource.setPassword(Environment.PASSWORD);
+        //dataSource.setPassword("123qwe");
         return dataSource;
     }
 

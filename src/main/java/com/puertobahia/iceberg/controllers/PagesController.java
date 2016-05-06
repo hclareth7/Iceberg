@@ -5,6 +5,7 @@
  */
 package com.puertobahia.iceberg.controllers;
 
+import com.puertobahia.iceberg.util.Environment;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
@@ -20,8 +21,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class PagesController {
 
     //private final String apiUrl = "http://hclareth7.me:8080/Iceberg/";
-    //private final String apiUrl = "http://localhost:8080/Iceberg/";
-    private final String apiUrl = "http://localhost:8085/Iceberg/";
+    private final String apiUrl = Environment.SERVERURL;
+   //private final String apiUrl = "http://localhost:8085/Iceberg/";
 
     @RequestMapping(value = "/")
     public ModelAndView getHomePage() {
