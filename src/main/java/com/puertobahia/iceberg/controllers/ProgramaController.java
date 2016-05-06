@@ -6,10 +6,13 @@
 package com.puertobahia.iceberg.controllers;
 
 
+import com.puertobahia.iceberg.config.security.ResourceNotFoundException;
 import com.puertobahia.iceberg.entity.Programa;
 import com.puertobahia.iceberg.service.ProgramaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,19 +40,32 @@ public class ProgramaController {
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
     public @ResponseBody Programa getProgramaById(@PathVariable Long id) {
         Programa programa = programaService.getById(id);
+        if (programa!=null) {
+            // whatever
+            return programa;
+        }
+        else {
+            throw new ResourceNotFoundException(); 
+        }
+    }
+    
+    @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
+    public Programa createPrograma(@RequestBody Programa programa) {
+        programaService.save(programa);
         return programa;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT)
-    public @ResponseBody Programa createPrograma(@RequestBody Programa programa) {
-        programaService.saveOrUpdate(programa);
+    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
+    public Programa updatePrograma(@RequestBody Programa programa) {
+        programaService.update(programa);
         return programa;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.POST)
-    public @ResponseBody Programa updatePrograma(@RequestBody Programa programa) {
-        programaService.saveOrUpdate(programa);
-        return programa;
+    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE)
+    public ResponseEntity<Programa> deletePrograma(@PathVariable("id") Long id) {
+
+        programaService.delete(id);
+        return new ResponseEntity<Programa>(HttpStatus.NO_CONTENT);
     }
     
     

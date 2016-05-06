@@ -6,10 +6,13 @@
 package com.puertobahia.iceberg.controllers;
 
 
+import com.puertobahia.iceberg.config.security.ResourceNotFoundException;
 import com.puertobahia.iceberg.entity.Usuario;
 import com.puertobahia.iceberg.service.UsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,22 +39,36 @@ public class UsuarioController {
     
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
     public @ResponseBody Usuario getUsuarioById(@PathVariable Long id) {
+       
         Usuario usuario = usuarioService.getById(id);
+        if (usuario!=null) {
+            // whatever
+            return usuario;
+        }
+        else {
+            throw new ResourceNotFoundException(); 
+        }
+
+    }
+    
+    @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
+    public Usuario createUsuario(@RequestBody Usuario usuario) {
+        usuarioService.save(usuario);
         return usuario;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT)
-    public @ResponseBody Usuario createUsuario(@RequestBody Usuario usuario) {
-        usuarioService.saveOrUpdate(usuario);
+    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
+    public Usuario updateUsuario(@RequestBody Usuario usuario) {
+        usuarioService.update(usuario);
         return usuario;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.POST)
-    public @ResponseBody Usuario updateUsuario(@RequestBody Usuario usuario) {
-        usuarioService.saveOrUpdate(usuario);
-        return usuario;
+    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE)
+    public ResponseEntity<Usuario> deleteUsuario(@PathVariable("id") Long id) {
+
+        usuarioService.delete(id);
+        return new ResponseEntity<Usuario>(HttpStatus.NO_CONTENT);
     }
-    
     
     
 }

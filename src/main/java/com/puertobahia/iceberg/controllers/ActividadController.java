@@ -6,10 +6,13 @@
 package com.puertobahia.iceberg.controllers;
 
 
+import com.puertobahia.iceberg.config.security.ResourceNotFoundException;
 import com.puertobahia.iceberg.entity.Actividad;
 import com.puertobahia.iceberg.service.ActividadService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,22 +39,33 @@ public class ActividadController {
     
     @RequestMapping(value={"/{id}"}, method = RequestMethod.GET)
     public @ResponseBody Actividad getActividadById(@PathVariable Long id) {
-        Actividad a = actividadService.getById(id);
-        return a;
+        Actividad actividad = actividadService.getById(id);
+        if (actividad!=null) {
+            // whatever
+            return actividad;
+        }
+        else {
+            throw new ResourceNotFoundException(); 
+        }
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT)
+    @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody Actividad createActividad(@RequestBody Actividad actividad) {
-        actividadService.saveOrUpdate(actividad);
+        actividadService.save(actividad);
         return actividad;
     }
     
-    @RequestMapping(value={"/", ""}, method = RequestMethod.POST)
+    @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
     public @ResponseBody Actividad updateActividad(@RequestBody Actividad actividad) {
-        actividadService.saveOrUpdate(actividad);
+        actividadService.update(actividad);
         return actividad;
     }
     
-    
+    @RequestMapping(value={"/{id}"}, method = RequestMethod.DELETE)
+    public ResponseEntity<Actividad> deleteActividad(@PathVariable("id") Long id) {
+
+        actividadService.delete(id);
+        return new ResponseEntity<Actividad>(HttpStatus.NO_CONTENT);
+    }
     
 }
