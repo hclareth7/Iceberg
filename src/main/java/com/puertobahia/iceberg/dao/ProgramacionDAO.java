@@ -17,7 +17,9 @@ public interface ProgramacionDAO {
     public List<Programacion> getAllProgramacion();
 
     public Programacion getById(Long id);
-
+    
+    public void save(Programacion programacion);
+    public void update(Programacion programacion);
     public void saveOrUpdate(Programacion programacion);
 
     public void delete(Long id);

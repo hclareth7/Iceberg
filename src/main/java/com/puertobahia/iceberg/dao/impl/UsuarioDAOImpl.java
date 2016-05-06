@@ -57,4 +57,15 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         getSession().delete(usuario);
     }
 
+    @Override
+    public void save(Usuario usuario) {
+        getSession().update(usuario);
+    }
+
+    @Override
+    public void update(Usuario usuario) {
+        getSession().update(usuario);
+
+    }
+
 }

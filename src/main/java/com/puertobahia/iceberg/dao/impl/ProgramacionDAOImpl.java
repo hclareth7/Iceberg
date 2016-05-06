@@ -55,4 +55,14 @@ public class ProgramacionDAOImpl implements ProgramacionDAO {
         getSession().delete(programacion);
     }
 
+    @Override
+    public void save(Programacion programacion) {
+        getSession().save(programacion);
+    }
+
+    @Override
+    public void update(Programacion programacion) {
+        getSession().update(programacion);
+    }
+
 }

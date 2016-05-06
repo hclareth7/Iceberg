@@ -55,4 +55,14 @@ public class ObjetivoDAOImpl implements ObjetivoDAO {
         getSession().delete(objetivo);
     }
 
+    @Override
+    public void save(Objetivo objetivo) {
+        getSession().save(objetivo);
+    }
+
+    @Override
+    public void update(Objetivo objetivo) {
+        getSession().update(objetivo);
+    }
+
 }

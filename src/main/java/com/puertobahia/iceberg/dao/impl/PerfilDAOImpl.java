@@ -56,4 +56,14 @@ public class PerfilDAOImpl implements PerfilDAO {
         getSession().delete(perfil);
     }
 
+    @Override
+    public void save(Perfil perfil) {
+        getSession().save(perfil);
+    }
+
+    @Override
+    public void update(Perfil perfil) {
+        getSession().update(perfil);
+    }
+
 }

@@ -55,4 +55,14 @@ public class AsistenciaDAOImpl implements AsistenciaDAO {
         getSession().delete(asistencia);
     }
 
+    @Override
+    public void save(Asistencia asistencia) {
+        getSession().save(asistencia);
+    }
+
+    @Override
+    public void update(Asistencia asistencia) {
+        getSession().update(asistencia);
+    }
+
 }

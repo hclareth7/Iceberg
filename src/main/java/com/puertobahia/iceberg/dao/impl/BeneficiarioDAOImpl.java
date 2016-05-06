@@ -55,4 +55,14 @@ public class BeneficiarioDAOImpl implements BeneficiarioDAO {
         getSession().delete(beneficiario);
     }
 
+    @Override
+    public void save(Beneficiario beneficiario) {
+        getSession().save(beneficiario);
+    }
+
+    @Override
+    public void update(Beneficiario beneficiario) {
+        getSession().update(beneficiario);
+    }
+
 }

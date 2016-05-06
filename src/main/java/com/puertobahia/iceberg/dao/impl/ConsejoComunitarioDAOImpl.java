@@ -56,4 +56,14 @@ public class ConsejoComunitarioDAOImpl implements ConsejoComunitarioDAO{
         getSession().delete(consejoComunitario);
     }
 
+    @Override
+    public void save(ConsejoComunitario consejoComunitario) {
+        getSession().save(consejoComunitario);
+    }
+
+    @Override
+    public void update(ConsejoComunitario consejoComunitario) {
+        getSession().update(consejoComunitario);
+    }
+
 }

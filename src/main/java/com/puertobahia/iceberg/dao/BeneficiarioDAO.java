@@ -15,6 +15,8 @@ import java.util.List;
 public interface BeneficiarioDAO {
     public List<Beneficiario> getAllBeneficiario();
     public Beneficiario getById(Long id);
+    public void save(Beneficiario beneficiario);
+    public void update(Beneficiario beneficiario);
     public void saveOrUpdate(Beneficiario beneficiario);
     public void delete(Long id);
 }

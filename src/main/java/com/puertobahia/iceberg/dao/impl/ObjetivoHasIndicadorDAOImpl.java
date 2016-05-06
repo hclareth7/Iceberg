@@ -55,4 +55,14 @@ public class ObjetivoHasIndicadorDAOImpl implements ObjetivoHasIndicadorDAO {
         getSession().delete(objetivoHasIndicador);
     }
 
+    @Override
+    public void save(ObjetivoHasIndicador objetivoHasIndicador) {
+        getSession().save(objetivoHasIndicador);
+    }
+
+    @Override
+    public void update(ObjetivoHasIndicador objetivoHasIndicador) {
+        getSession().update(objetivoHasIndicador);
+    }
+
 }

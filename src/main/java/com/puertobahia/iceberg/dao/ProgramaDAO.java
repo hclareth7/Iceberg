@@ -16,7 +16,9 @@ public interface ProgramaDAO {
     public List<Programa> getAllPrograma();
 
     public Programa getById(Long id);
-
+    
+    public void save(Programa programa);
+    public void update(Programa programa);
     public void saveOrUpdate(Programa programa);
 
     public void delete(Long id);

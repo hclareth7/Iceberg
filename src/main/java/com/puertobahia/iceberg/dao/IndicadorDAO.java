@@ -18,6 +18,8 @@ public interface IndicadorDAO {
 
     public Indicador getById(Long id);
 
+    public void save(Indicador indicador);
+    public void update(Indicador indicador);
     public void saveOrUpdate(Indicador indicador);
 
     public void delete(Long id);

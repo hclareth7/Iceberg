@@ -6,7 +6,6 @@
 package com.puertobahia.iceberg.dao.impl;
 
 import com.puertobahia.iceberg.dao.IndicadorDAO;
-import com.puertobahia.iceberg.entity.Empleado;
 import com.puertobahia.iceberg.entity.Indicador;
 import java.util.List;
 import org.hibernate.Criteria;
@@ -54,6 +53,16 @@ public class IndicadorDAOImpl implements IndicadorDAO {
         Indicador indicador = new Indicador();
         indicador.setId(id);
         getSession().delete(indicador);
+    }
+
+    @Override
+    public void save(Indicador indicador) {
+        getSession().save(indicador);
+    }
+
+    @Override
+    public void update(Indicador indicador) {
+        getSession().update(indicador);
     }
 
 }

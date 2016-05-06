@@ -15,6 +15,8 @@ import java.util.List;
 public interface ConsejoComunitarioDAO {
     public List<ConsejoComunitario> getAllConsejoComunitario();
     public ConsejoComunitario getById(Long id);
+    public void save(ConsejoComunitario consejoComunitario);
+    public void update(ConsejoComunitario consejoComunitario);
     public void saveOrUpdate(ConsejoComunitario consejoComunitario);
     public void delete(Long id);
 }

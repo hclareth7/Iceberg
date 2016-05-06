@@ -55,4 +55,14 @@ public class EmpleadoDAOImpl implements EmpleadoDAO {
         getSession().delete(empleado);
     }
 
+    @Override
+    public void save(Empleado empleado) {
+        getSession().save(empleado);
+    }
+
+    @Override
+    public void update(Empleado empleado) {
+        getSession().update(empleado);
+    }
+
 }

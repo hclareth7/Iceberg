@@ -17,7 +17,9 @@ public interface PerfilDAO {
     public List<Perfil> getAllPerfil();
 
     public Perfil getById(Long id);
-
+    
+    public void save(Perfil perfil);
+    public void update(Perfil perfil);
     public void saveOrUpdate(Perfil perfil);
 
     public void delete(Long id);

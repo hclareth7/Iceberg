@@ -55,4 +55,14 @@ public class ActividadDAOImpl implements ActividadDAO {
         actividad.setId(id);
         getSession().delete(actividad);
     }
+
+    @Override
+    public void save(Actividad actividad) {
+        getSession().save(actividad);
+    }
+
+    @Override
+    public void update(Actividad actividad) {
+        getSession().update(actividad);
+    }
 }

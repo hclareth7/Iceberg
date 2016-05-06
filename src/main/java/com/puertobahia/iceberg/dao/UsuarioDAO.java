@@ -17,8 +17,10 @@ public interface UsuarioDAO {
     public List<Usuario> getAllUsuario();
 
     public Usuario getById(Long id);
-
+    
+    public void save(Usuario usuario);
+    public void update(Usuario usuario);
     public void saveOrUpdate(Usuario usuario);
-
+ 
     public void delete(Long id);
 }
