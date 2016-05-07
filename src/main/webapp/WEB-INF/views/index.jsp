@@ -117,6 +117,8 @@
         <script src="assets/js/app/services/perfilService.js"></script>
         <script src="assets/js/app/services/programaService.js"></script>
         <script src="assets/js/app/services/objetivoService.js"></script>
+        <script src="assets/js/app/services/indicadorService.js"></script>
+        <script src="assets/js/app/services/actividadService.js"></script>
 
         <script src="assets/js/app/controllers/loginController.js"></script>
         <script src="assets/js/app/controllers/zonaController.js"></script>
@@ -124,6 +126,8 @@
         <script src="assets/js/app/controllers/perfilController.js"></script>
         <script src="assets/js/app/controllers/programaController.js"></script>
         <script src="assets/js/app/controllers/objetivoController.js"></script>
+        <script src="assets/js/app/controllers/actividadController.js"></script>
+        <script src="assets/js/app/controllers/indicadorController.js"></script>
         <script src="assets/js/app/app.js"></script>
 
 

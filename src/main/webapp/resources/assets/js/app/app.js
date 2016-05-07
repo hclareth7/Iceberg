@@ -139,5 +139,39 @@ icebergApp.config(['$stateProvider', '$urlRouterProvider', 'toastrConfig', funct
                     controller: 'objetivoCrearController'
                 })
                 
+                //INDICADORES ROUTES
+                .state('main.indicadores', {
+                    url: '/indicador',
+                    templateUrl: 'assets/js/app/views/indicadores/base.html',
+                    controller: 'indicadorController'
+                })
+                .state('main.indicadores.detalle', {
+                    url: '/detalle/:indicadorId',
+                    templateUrl: 'assets/js/app/views/indicadores/crear.html',
+                    controller: 'indicadorEditarController'
+                })
+                .state('main.indicadores.crear', {
+                    url: '/crear',
+                    templateUrl: 'assets/js/app/views/indicadores/crear.html',
+                    controller: 'indicadorCrearController'
+                })
+                
+                //ACTIVIDADES ROUTES
+                .state('main.actividades', {
+                    url: '/actividad',
+                    templateUrl: 'assets/js/app/views/actividades/base.html',
+                    controller: 'actividadController'
+                })
+                .state('main.actividades.detalle', {
+                    url: '/detalle/:actividadId',
+                    templateUrl: 'assets/js/app/views/actividades/crear.html',
+                    controller: 'actividadEditarController'
+                })
+                .state('main.actividades.crear', {
+                    url: '/crear',
+                    templateUrl: 'assets/js/app/views/actividades/crear.html',
+                    controller: 'actividadCrearController'
+                })
+                
 
     }]);
