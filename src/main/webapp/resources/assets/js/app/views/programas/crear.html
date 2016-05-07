@@ -1,0 +1,89 @@
+<div>
+	<div class="row">
+		<div class="col-md-12 modal-form">
+			<div class="panel panel-primary ">
+				<div class="panel-heading">
+					<span class="panel-title">{{titulo}}</span>
+					<div class="panel-body">
+						<form class="form-horizontal" role="form" ng-submit="savePrograma()">
+
+
+							<div class="form-group">
+								<label for="inputStandard" class="col-lg-3 control-label">Nombre</label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<input type="text" id="inputStandard" class="form-control" ng-model="programa.nombre">
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="form-group">
+								<label class="col-lg-3 control-label" for="textArea2">Descripcion</label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<textarea class="form-control" id="textArea2" rows="3" ng-model="programa.descripcion"></textarea>
+										<div id="source-button" class="btn btn-system btn-xs" style="display: none;">&lt; &gt;</div>
+									</div>
+								</div>
+							</div>
+							<!--<strong><p class="form-control-static text-system">Consejo cumunitario</p></strong>
+							<br>
+
+							<div class="form-group">
+								<label for="inputStandard" class="col-lg-3 control-label">Presidente</label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<input type="text" id="inputStandard" class="form-control" ng-model="consejo.presidente">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputStandard" class="col-lg-3 control-label">Contacto</label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<input type="text" id="inputStandard" class="form-control" ng-model="consejo.contacto">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputStandard" class="col-lg-3 control-label">Periodo</label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<input type="text" id="inputStandard" class="form-control" ng-model="consejo.periodo">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-lg-3 control-label" for="textArea1">Miembros </label>
+
+								<div class="col-lg-8">
+									<div class="bs-component">
+										<textarea class="form-control textarea-grow" id="textArea1" rows="4" ng-model="consejo.participantes"></textarea>
+									</div>
+								</div>
+							</div>-->
+							<div class="panel-footer">
+								<button type="submit" class="btn btn-primary">{{boton}}</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</div>
+</div>

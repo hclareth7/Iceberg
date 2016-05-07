@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/indicador")
 public class IndicadorController {
     
@@ -50,13 +51,13 @@ public class IndicadorController {
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
-    public @ResponseBody Indicador createIndicador(@RequestBody Indicador indicador) {
+    public Indicador createIndicador(@RequestBody Indicador indicador) {
         indicadorService.save(indicador);
         return indicador;
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
-    public @ResponseBody Indicador updateIndicador(@RequestBody Indicador indicador) {
+    public Indicador updateIndicador(@RequestBody Indicador indicador) {
         indicadorService.update(indicador);
         return indicador;
     }

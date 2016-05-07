@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/empleado")
 public class EmpleadoController {
     
@@ -50,13 +51,13 @@ public class EmpleadoController {
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
-    public @ResponseBody Empleado createEmpleado(@RequestBody Empleado empleado) {
+    public Empleado createEmpleado(@RequestBody Empleado empleado) {
         empleadoService.save(empleado);
         return empleado;
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
-    public @ResponseBody Empleado updateEmpleado(@RequestBody Empleado empleado) {
+    public Empleado updateEmpleado(@RequestBody Empleado empleado) {
         empleadoService.update(empleado);
         return empleado;
     }

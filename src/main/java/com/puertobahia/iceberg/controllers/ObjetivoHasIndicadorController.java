@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/objetivoHasIndicador")
 public class ObjetivoHasIndicadorController {
     
@@ -50,13 +51,13 @@ public class ObjetivoHasIndicadorController {
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
-    public @ResponseBody ObjetivoHasIndicador createObjetivoHasIndicador(@RequestBody ObjetivoHasIndicador objetivoHasIndicador) {
+    public ObjetivoHasIndicador createObjetivoHasIndicador(@RequestBody ObjetivoHasIndicador objetivoHasIndicador) {
         objetivoHasIndicadorService.save(objetivoHasIndicador);
         return objetivoHasIndicador;
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
-    public @ResponseBody ObjetivoHasIndicador updateObjetivoHasIndicador(@RequestBody ObjetivoHasIndicador objetivoHasIndicador) {
+    public ObjetivoHasIndicador updateObjetivoHasIndicador(@RequestBody ObjetivoHasIndicador objetivoHasIndicador) {
         objetivoHasIndicadorService.update(objetivoHasIndicador);
         return objetivoHasIndicador;
     }

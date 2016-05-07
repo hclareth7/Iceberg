@@ -1,156 +1,163 @@
 <!-- -------------- Header  -------------- -->
 <header class="navbar navbar-fixed-top bg-dark">
-	<div class="navbar-logo-wrapper">
-		<a class="navbar-logo-text" ui-sref="main">
-			<img src="assets/img/logotipo.png" class="mi-logotipo">
-		</a>
-		<span id="sidebar_left_toggle" class="ad ad-lines"></span>
-	</div>
+    <div class="navbar-logo-wrapper">
+        <a class="navbar-logo-text" ui-sref="main">
+            <img src="assets/img/logotipo.png" class="mi-logotipo">
+        </a>
+        <span id="sidebar_left_toggle" class="ad ad-lines"></span>
+    </div>
 
-	<ul class="nav navbar-nav navbar-right">
-		<li class="dropdown dropdown-fuse">
-			<a href="#" class="dropdown-toggle fw600" data-toggle="dropdown">
-				<span class="hidden-xs"><name>Juan Puerto Bahia </name> </span>
-				<span class="fa fa-caret-down hidden-xs mr15"></span>
-				<img src="assets/img/avatar.png" alt="avatar" class="mw55">
-			</a>
-			<ul class="dropdown-menu list-group keep-dropdown w250" role="menu">
-				<li class="list-group-item">
-					<a href="#" class="animated animated-short fadeInUp">
-						<span class="fa fa-cogs"></span> Settings </a>
-				</li>
-				<li class="dropdown-footer text-center">
-					<a ui-sref="login" class="btn btn-primary btn-sm btn-bordered">
-						<span class="fa fa-power-off pr5"></span> Logout </a>
-				</li>
-			</ul>
-		</li>
-	</ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown dropdown-fuse">
+            <a href="#" class="dropdown-toggle fw600" data-toggle="dropdown">
+                <span class="hidden-xs"><name>Juan Puerto Bahia </name> </span>
+                <span class="fa fa-caret-down hidden-xs mr15"></span>
+                <img src="assets/img/avatar.png" alt="avatar" class="mw55">
+            </a>
+            <ul class="dropdown-menu list-group keep-dropdown w250" role="menu">
+                <li class="list-group-item">
+                    <a href="#" class="animated animated-short fadeInUp">
+                        <span class="fa fa-cogs"></span> Settings </a>
+                </li>
+                <li class="dropdown-footer text-center">
+                    <a ui-sref="login" class="btn btn-primary btn-sm btn-bordered">
+                        <span class="fa fa-power-off pr5"></span> Logout </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </header>
 <!-- -------------- /Header  -------------- -->
 
 <!-- -------------- Sidebar  -------------- -->
 <aside id="sidebar_left" class="nano nano-light affix">
 
-	<!-- -------------- Sidebar Left Wrapper  -------------- -->
-	<div class="sidebar-left-content nano-content">
+    <!-- -------------- Sidebar Left Wrapper  -------------- -->
+    <div class="sidebar-left-content nano-content">
 
-		<!-- -------------- Sidebar Header -------------- -->
-		<header class="sidebar-header">
+        <!-- -------------- Sidebar Header -------------- -->
+        <header class="sidebar-header">
 
-			<!-- -------------- Sidebar - Author -------------- -->
-			<div class="sidebar-widget author-widget">
-				<div class="media">
-					<a class="media-left" href="#">
-						<img src="assets/img/avatar.png" class="img-responsive">
-					</a>
+            <!-- -------------- Sidebar - Author -------------- -->
+            <div class="sidebar-widget author-widget">
+                <div class="media">
+                    <a class="media-left" href="#">
+                        <img src="assets/img/avatar.png" class="img-responsive">
+                    </a>
 
-					<div class="media-body">
-						<div class="media-links">
-							<a href="#" class="sidebar-menu-toggle">Juan Puerto Bahia</a>
-							<a ui-sref="login"></a>
-						</div>
-						<div class="media-author">Administrador</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- -------------- /Sidebar Header -------------- -->
+                    <div class="media-body">
+                        <div class="media-links">
+                            <a href="#" class="sidebar-menu-toggle">Juan Puerto Bahia</a>
+                            <a ui-sref="login"></a>
+                        </div>
+                        <div class="media-author">Administrador</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- -------------- /Sidebar Header -------------- -->
 
-		<!-- -------------- Sidebar Menu  -------------- -->
-		<ul class="nav sidebar-menu">
+        <!-- -------------- Sidebar Menu  -------------- -->
+        <ul class="nav sidebar-menu">
 
-			<li class="sidebar-label pt30">Menu</li>
-
-
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="main.beneficiarios">
-					<span class="fa fa-group"></span>
-					<span class="sidebar-title">Beneficiarios</span>
-					<span class="caret"></span>
-				</a>
-			</li>
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="/">
-					<span class="fa fa-puzzle-piece"></span>
-					<span class="sidebar-title">Programas</span>
-					<span class="caret"></span>
-				</a>
-				<!-- EJEMPLO DE SUBMENUS...
-					<ul class="nav sub-nav">
-						<li class="active">
-							<a href="dashboard1.html">
-								<span class="fa fa-file-text-o"></span> Layout 1 </a>
-						</li>
-						<li>
-							<a href="dashboard2.html">
-								<span class="fa fa-file-text-o"></span> Layout 2 </a>
-						</li>
-					</ul>-->
-			</li>
-
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="/">
-					<span class="fa fa-calendar"></span>
-					<span class="sidebar-title">Actividades</span>
-					<span class="caret"></span>
-				</a>
-			</li>
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
-					<span class="fa fa-map-marker"></span>
-					<span class="sidebar-title">Zonas</span>
-					<span class="caret"></span>
-				</a>
-			</li>
-			
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="/">
-					<span class="fa fa-suitcase"></span>
-					<span class="sidebar-title">Empleados</span>
-					<span class="caret"></span>
-				</a>
-			</li>
-
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="main.zonas">
-					<span class="fa fa-user"></span>
-					<span class="sidebar-title">Usuarios</span>
-					<span class="caret"></span>
-				</a>
-			</li>
+            <li class="sidebar-label pt30">Menu</li>
 
 
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="main.beneficiarios">
+                    <span class="fa fa-group"></span>
+                    <span class="sidebar-title">Beneficiarios</span>
+                    <span class="caret"></span>
+                </a>
+            </li>
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="main.programas">
+                    <span class="fa fa-puzzle-piece"></span>
+                    <span class="sidebar-title">Programas</span>
+                    <span class="caret"></span>
+                </a>
+                <!-- EJEMPLO DE SUBMENUS...
+                        <ul class="nav sub-nav">
+                                <li class="active">
+                                        <a href="dashboard1.html">
+                                                <span class="fa fa-file-text-o"></span> Layout 1 </a>
+                                </li>
+                                <li>
+                                        <a href="dashboard2.html">
+                                                <span class="fa fa-file-text-o"></span> Layout 2 </a>
+                                </li>
+                        </ul>-->
+            </li>
 
-			<li>
-				<a class="accordion-toggle menu-open" ui-sref="/">
-					<span class="fa fa-flag-checkered"></span>
-					<span class="sidebar-title">Objetivos</span>
-					<span class="caret"></span>
-				</a>
-			</li>
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="/">
+                    <span class="fa fa-calendar"></span>
+                    <span class="sidebar-title">Actividades</span>
+                    <span class="caret"></span>
+                </a>
+            </li>
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="main.zonas">
+                    <span class="fa fa-map-marker"></span>
+                    <span class="sidebar-title">Zonas</span>
+                    <span class="caret"></span>
+                </a>
+            </li>
+
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="/">
+                    <span class="fa fa-suitcase"></span>
+                    <span class="sidebar-title">Empleados</span>
+                    <span class="caret"></span>
+                </a>
+            </li>
+
+            <li>
+                <a class="accordion-toggle menu-open">
+                    <span class="fa fa-user"></span>
+                    <span class="sidebar-title">Usuarios</span>
+                    <span class="caret"></span>
+                </a>
+
+                <ul class="nav sub-nav">
+                    <li class="active">
+                        <a ui-sref="main.perfiles">
+                            <span class="fa fa-file-text-o"></span> Perfiles </a>
+                    </li>
+                </ul>
+            </li>
 
 
-		</ul>
-		<!-- -------------- /Sidebar Menu  -------------- -->
 
-		<!-- -------------- Sidebar Hide Button -------------- -->
-		<div class="sidebar-toggler">
-			<a href="#">
-				<span class="fa fa-arrow-circle-o-left"></span>
-			</a>
-		</div>
-		<!-- -------------- /Sidebar Hide Button -------------- -->
+            <li>
+                <a class="accordion-toggle menu-open" ui-sref="main.objetivos">
+                    <span class="fa fa-flag-checkered"></span>
+                    <span class="sidebar-title">Objetivos</span>
+                    <span class="caret"></span>
+                </a>
+            </li>
 
-	</div>
-	<!-- -------------- /Sidebar Left Wrapper  -------------- -->
+
+        </ul>
+        <!-- -------------- /Sidebar Menu  -------------- -->
+
+        <!-- -------------- Sidebar Hide Button -------------- -->
+        <div class="sidebar-toggler">
+            <a href="#">
+                <span class="fa fa-arrow-circle-o-left"></span>
+            </a>
+        </div>
+        <!-- -------------- /Sidebar Hide Button -------------- -->
+
+    </div>
+    <!-- -------------- /Sidebar Left Wrapper  -------------- -->
 
 </aside>
 <!-- -------------- /Sidebar -------------- -->
 
 <!-- -------------- Main Wrapper -------------- -->
 <section id="content_wrapper">
-	<section id="content" ui-view>
-	</section>
+    <section id="content" ui-view>
+    </section>
 </section>
 <!-- -------------- /Main Wrapper -------------- -->

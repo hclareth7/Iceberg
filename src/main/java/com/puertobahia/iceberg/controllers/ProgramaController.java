@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/programa")
 public class ProgramaController {
     
@@ -50,9 +51,9 @@ public class ProgramaController {
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
-    public Programa createPrograma(@RequestBody Programa programa) {
+    public String createPrograma(@RequestBody Programa programa) {
         programaService.save(programa);
-        return programa;
+        return "DFDFDS";
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")

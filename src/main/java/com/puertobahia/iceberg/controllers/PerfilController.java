@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author William
  */
-@Controller
+@RestController
 @RequestMapping("/perfil")
 public class PerfilController {
     
@@ -51,13 +52,13 @@ public class PerfilController {
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.POST, consumes = "application/json")
-    public @ResponseBody Perfil createPerfil(@RequestBody Perfil perfil) {
+    public Perfil createPerfil(@RequestBody Perfil perfil) {
         perfilService.save(perfil);
         return perfil;
     }
     
     @RequestMapping(value={"/", ""}, method = RequestMethod.PUT, consumes = "application/json")
-    public @ResponseBody Perfil updatePerfil(@RequestBody Perfil perfil) {
+    public Perfil updatePerfil(@RequestBody Perfil perfil) {
         perfilService.update(perfil);
         return perfil;
     }
